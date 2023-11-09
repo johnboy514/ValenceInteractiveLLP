@@ -12,8 +12,8 @@ function App() {
     <Router>
         <Navbar />
         <Routes>
-          <Route path="/yogatemplate" element={<Home />} />
-          <Route path="*" element={<Navigate to="/yogatemplate"/>} />
+          <Route path="/webdevtemplate" element={<Home />} />
+          <Route path="*" element={<Navigate to="/webdevtemplate"/>} />
         </Routes>
         <Footer />
     </Router>
