@@ -1,10 +1,37 @@
-import React from "react";
+import {React, useEffect} from "react";
 import {Card, Container, Row}from 'react-bootstrap';
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
 
 function Home() {
+  const items = [
+    { id: 1, image: Yoga },
+    { id: 2, image: Landscaping },
+    { id: 3, image: Handyman },
+    { id: 4, image: 'https://img.freepik.com/premium-vector/coming-soon-dark-grey-banner-with-3d-orange-traffic-cones-yellow-striped-roadblock_624052-888.jpg' }
+    // Add more items as needed
+  ];
+  // Duplicate the items for looping effect
+  const duplicatedItems = [...items, ...items];
+
+  useEffect(() => {
+    const createCarouselItems = () => {
+      let totalItems = items.length;
+      let slides = Math.ceil(totalItems / 4);
+
+      let tempCarouselItems = [];
+
+      for (let i = 0; i < slides; i++) {
+        let startIdx = i * 4;
+        let endIdx = startIdx + 4;
+        let slideItems = items.slice(startIdx, endIdx);
+
+        tempCarouselItems.push(slideItems);
+      }
+    };
+    createCarouselItems();
+  }, [items]);
   return (
     <div>
 <section class="text-center">
@@ -15,7 +42,7 @@ function Home() {
         filter: 'brightness(50%)'
         }}></div>
 
-  <div class="card mx-4 mx-md-5" style={{
+  <div class="card mx-4 mx-md-5 slideInLeft" style={{
         marginTop: "-800px",
         background: "hsla(0, 0%, 100%, 0.0)",
         border: 'none',
@@ -34,7 +61,7 @@ function Home() {
   </div>
 </section>
 <center>
-      <Container style={{marginTop: '150px'}}>
+      <Container style={{marginTop: '150px'}} className="slideInBottom">
       <Row className="d-flex flex-wrap justify-content-center">
         <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
           <Card className="text-white mt-4 mx-3 image-hover" style={{ backgroundColor: 'rgba(0, 0, 0, 0.0)', borderStyle: 'none', width: '15rem', height: '20rem' }}>
@@ -63,7 +90,42 @@ function Home() {
       </Row>
     </Container>
     </center>
-  </div>
+    <div className="container text-center my-3">
+        <div id="recipeCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div className="carousel-inner" role="listbox">
+            {duplicatedItems.map((item, index) => (
+              <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                <div className="row">
+                  {[0, 1, 2, 3].map((colIndex) => {
+                    const currentIndex = index + colIndex;
+                    const carouselItem = duplicatedItems[currentIndex % duplicatedItems.length];
+                    return (
+                      <div className="col-md-3" key={colIndex}>
+                        <div className="card">
+                          <div className="card-img">
+                            <img
+                              src={carouselItem.image}
+                              className="img-fluid"
+                              alt={`Slide ${carouselItem.id}`}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="carousel-control-prev bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button className="carousel-control-next bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      </div>
   );
 }
 
