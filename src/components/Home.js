@@ -3,13 +3,14 @@ import {Card, Container, Row}from 'react-bootstrap';
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
+import UnderConstruction from "../images/UnderConstruction.png";
 
 function Home() {
   const items = [
     { id: 1, image: Yoga },
     { id: 2, image: Landscaping },
     { id: 3, image: Handyman },
-    { id: 4, image: 'https://img.freepik.com/premium-vector/coming-soon-dark-grey-banner-with-3d-orange-traffic-cones-yellow-striped-roadblock_624052-888.jpg' }
+    { id: 4, image: UnderConstruction }
     // Add more items as needed
   ];
   // Duplicate the items for looping effect
