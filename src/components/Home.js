@@ -60,31 +60,6 @@ function Home() {
       </Row>
     </Container>
     </center>
-{/* Hover Effect */}
-{/* <section className="text-center">
-  <div className="d-flex flex-column align-items-center">
-    <div className="bg-image hover-overlay hover-zoom hover-shadow ripple m-3">
-      <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" className="w-100" />
-      <a href="#!">
-        <div className="mask" style={{ backgroundColor: "hsla(195, 83%, 58%, 0.2)" }}></div>
-      </a>
-    </div>
-
-    <div className="bg-image hover-overlay hover-zoom hover-shadow ripple m-3">
-      <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" className="w-100" />
-      <a href="#!">
-        <div className="mask" style={{ backgroundColor: "hsla(195, 83%, 58%, 0.2)" }}></div>
-      </a>
-    </div>
-
-    <div className="bg-image hover-overlay hover-zoom hover-shadow ripple m-3">
-      <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" className="w-100" />
-      <a href="#!">
-        <div className="mask" style={{ backgroundColor: "hsla(195, 83%, 58%, 0.2)" }}></div>
-      </a>
-    </div>
-  </div>
-</section> */}
   </div>
   );
 }
