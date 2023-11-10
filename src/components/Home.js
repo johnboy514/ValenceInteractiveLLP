@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Container, Row, Carousel}from 'react-bootstrap';
+import {Card, Container, Row}from 'react-bootstrap';
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
