@@ -5,6 +5,7 @@
 // import Form from 'react-bootstrap/Form';
 // import Modal from 'react-bootstrap/Modal';
 // import { useState } from 'react';
+import devLogo from '../images/Logo.png';
 
 function NavbarComponent() {
   const navbarStyle = {
@@ -27,16 +28,15 @@ function NavbarComponent() {
     <div>
 <nav class="navbar navbar-expand-lg navbar-dark" style={navbarStyle}>
   <div class="container">
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
       <img
-        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-        height="16"
+        src={devLogo}
+        height="108"
         alt="MDB Logo"
         loading="lazy"
         style={{marginTop: "-1px"}}
+        className="me-5"
       />
-    </a>
-    <h1 className='me-5' style={{color: 'white', fontFamily: 'Lobster, sans-serif'}}>WebDevBoyz</h1>
+    {/* <h1 className='me-5' style={{color: 'white', fontFamily: 'Lobster, sans-serif'}}>WebDevBoyz</h1> */}
     <button
       class="navbar-toggler"
       type="button"
