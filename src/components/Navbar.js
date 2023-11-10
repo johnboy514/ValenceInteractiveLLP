@@ -31,7 +31,7 @@ function NavbarComponent() {
       <img
         src={devLogo}
         height="108"
-        alt="MDB Logo"
+        alt="Logo"
         loading="lazy"
         style={{marginTop: "-1px"}}
         className="me-5"
