@@ -1,20 +1,23 @@
-import {React, useEffect} from "react";
-import {Card, Container, Row}from 'react-bootstrap';
+import {React, useEffect, useMemo} from "react";
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
 import UnderConstruction from "../images/UnderConstruction.png";
 
 function Home() {
-  const items = [
-    { id: 1, image: Yoga },
-    { id: 2, image: Landscaping },
-    { id: 3, image: Handyman },
-    { id: 4, image: UnderConstruction }
-    // Add more items as needed
-  ];
+  const items = useMemo(
+    () => [
+      { id: 1, image: Yoga },
+      { id: 2, image: Landscaping },
+      { id: 3, image: Handyman },
+      { id: 4, image: UnderConstruction },
+      // Add more items as needed
+    ],
+    []
+  );
+
   // Duplicate the items for looping effect
-  const duplicatedItems = [...items, ...items];
+  const duplicatedItems = useMemo(() => [...items, ...items], [items]);
 
   useEffect(() => {
     const createCarouselItems = () => {
@@ -62,37 +65,8 @@ function Home() {
   </div>
 </section>
 <center>
-      <Container style={{marginTop: '150px'}} className="slideInBottom">
-      <Row className="d-flex flex-wrap justify-content-center">
-        <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-          <Card className="text-white mt-4 mx-3 image-hover" style={{ backgroundColor: 'rgba(0, 0, 0, 0.0)', borderStyle: 'none', width: '15rem', height: '20rem' }}>
-            <Card.Header className="image-hover image-size" style={{ width: '15rem', height: '15rem', borderRadius: '10%', paddingTop: '200px', backgroundSize: 'cover', display: 'block', marginLeft: 'auto', marginRight: 'auto', backgroundImage: 'url(' + Landscaping + ')'}}></Card.Header>
-            <Card.Body className="d-flex flex-column">
-              <Card.Title style={{ color: 'white', fontSize: '30px', fontFamily: 'Lobster, sans-serif' }} className='mb-4'>Landscaping Template</Card.Title>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-          <Card className="text-white mt-4 mx-3 image-hover" style={{ backgroundColor: 'rgba(0, 0, 0, 0.0)', borderStyle: 'none', width: '15rem', height: '20rem' }}>
-            <Card.Header className="image-hover image-size" style={{ width: '15rem', height: '15rem', borderRadius: '10%', paddingTop: '200px', backgroundSize: 'cover', display: 'block', marginLeft: 'auto', marginRight: 'auto', backgroundImage: 'url(' + Yoga + ')'}}></Card.Header>
-            <Card.Body className="d-flex flex-column">
-              <Card.Title style={{ color: 'white', fontSize: '30px', fontFamily: 'Lobster, sans-serif' }} className='mb-4'>Yoga Template</Card.Title>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-          <Card className="text-white mt-4 mx-3 image-hover" style={{ backgroundColor: 'rgba(0, 0, 0, 0.0)', borderStyle: 'none', width: '15rem', height: '20rem' }}>
-            <Card.Header className="image-hover image-size" style={{ width: '15rem', height: '15rem', borderRadius: '10%', paddingTop: '200px', backgroundSize: 'cover', display: 'block', marginLeft: 'auto', marginRight: 'auto', backgroundImage: 'url(' + Handyman + ')'}}></Card.Header>
-            <Card.Body className="d-flex flex-column">
-              <Card.Title style={{ color: 'white', fontSize: '30px', fontFamily: 'Lobster, sans-serif' }} className='mb-4'>Handyman Template</Card.Title>
-            </Card.Body>
-          </Card>
-        </div>
-      </Row>
-    </Container>
-    </center>
-    <div className="container text-center my-3">
-        <div id="recipeCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+<div className="container text-center my-3">
+        <div id="recipeCarousel" style={{marginTop: '200px'}} className="carousel slide slideInBottom" data-bs-ride="carousel" data-bs-interval="5000">
           <div className="carousel-inner" role="listbox">
             {duplicatedItems.map((item, index) => (
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
@@ -126,6 +100,9 @@ function Home() {
           </button>
         </div>
       </div>
+        <div style={{marginTop: '400px'}}>
+        </div>
+    </center>    
       </div>
   );
 }
