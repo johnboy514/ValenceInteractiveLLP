@@ -1,10 +1,3 @@
-// import Button from 'react-bootstrap/Button';
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import Form from 'react-bootstrap/Form';
-// import Modal from 'react-bootstrap/Modal';
-// import { useState } from 'react';
 import devLogo from '../images/Logo.png';
 
 function NavbarComponent() {
@@ -36,7 +29,6 @@ function NavbarComponent() {
         style={{marginTop: "-1px"}}
         className="me-5"
       />
-    {/* <h1 className='me-5' style={{color: 'white', fontFamily: 'Lobster, sans-serif'}}>WebDevBoyz</h1> */}
     <button
       class="navbar-toggler"
       type="button"
@@ -54,16 +46,19 @@ function NavbarComponent() {
           <a class="nav-link button-pop-out" style={linkStyle} href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link button-pop-out" style={linkStyle} href="/">Projects</a>
+          <a class="nav-link button-pop-out" style={linkStyle} href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link button-pop-out" style={linkStyle} href="/">Services</a>
+          <a class="nav-link button-pop-out" style={linkStyle} href="#pricing">Pricing</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link button-pop-out" style={linkStyle} href="#reviews">Reviews</a>
         </li>       
       </ul>
       <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-link px-3 me-2 text-capitalize button-pop-out" style={linkStyle}>
+        <a href="#aboutus"><button type="button" class="btn btn-link px-3 me-2 text-capitalize button-pop-out" style={linkStyle}>
           About Us
-        </button>
+        </button></a>
         <button type="button" class="btn me-3 button-pop-out" style={{backgroundColor: '#00A8E8', color: 'white'}}>
           Contact Us
         </button>

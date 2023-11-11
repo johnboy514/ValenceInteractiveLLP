@@ -1,51 +1,96 @@
 function Footer() {
     return (       
-        <div>
-        <section class="">
-  <footer class="bg-secondary text-white text-center">
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Footer Content</h5>
-
+<div>
+<footer class="text-center text-lg-start bg-white text-muted">
+<section className="d-flex justify-content-center p-4 border-bottom">
+          <div className="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <div>
+            <a href="/" className="me-4 link-secondary">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="/" className="me-4 link-secondary">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="/" className="me-4 link-secondary">
+              <i className="fab fa-google"></i>
+            </a>
+            <a href="/" className="me-4 link-secondary">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="/" className="me-4 link-secondary">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="/" className="me-4 link-secondary">
+              <i className="fab fa-github"></i>
+            </a>
+          </div>
+        </section>
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>WebDevBoyz
+          </h6>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+           Empower your online presence with our expert website development services, 
+           where innovation meets functionality for a seamless and impactful digital experience.
           </p>
         </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Technology
+          </h6>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/React_(software)" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" class="text-reset">Bootstrap</a>
+          </p>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/JavaScript" class="text-reset">Javascript</a>
+          </p>
+          <p>
+            <a href="https://en.wikipedia.org/wiki/CSS" class="text-reset">CSS</a>
+          </p>
         </div>
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0">Contact Us</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Navigation
+          </h6>
+          <p>
+            <a href="/" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#pricing" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#reviews" class="text-reset">Reviews</a>
+          </p>
+          <p>
+            <a href="#aboutus" class="text-reset">About Us</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i>United States</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            webdevboyz@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 555 555 5555</p>
         </div>
       </div>
     </div>
-
-    <div class="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-  </footer>
-</section>
-        </div>
+  </section>
+  <div class="text-center p-4 text-white" style={{backgroundColor: "#003459"}}>
+    © 2023 Copyright:
+    <a class="text-reset fw-bold mx-2" href="/">WebDevBoyz</a>
+  </div>
+</footer>
+</div>
     )
 }
 
