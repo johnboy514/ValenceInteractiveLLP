@@ -1,4 +1,24 @@
 function Footer() {
+  const customScroll = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const navbarHeight = 200;
+      const offset = navbarHeight;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+  const linkStyle = {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: 'black',
+    padding: '5px 10px',
+    textDecoration: 'none',
+    fontFamily: 'Kanit, sans-serif'
+  };
     return (       
 <div>
 <footer class="text-center text-lg-start bg-white text-muted">
@@ -61,16 +81,44 @@ function Footer() {
             Navigation
           </h6>
           <p>
-            <a href="/" class="text-reset">Home</a>
+          <button
+                type="button"
+                className="btn btn-link  text-capitalize button-pop-out"
+                style={linkStyle}
+                onClick={() => customScroll('home')}
+              >
+                Home
+          </button>
           </p>
           <p>
-            <a href="#pricing" class="text-reset">Pricing</a>
+          <button
+                type="button"
+                className="btn btn-link  text-capitalize button-pop-out"
+                style={linkStyle}
+                onClick={() => customScroll('pricing')}
+              >
+                Pricing
+          </button>
           </p>
           <p>
-            <a href="#reviews" class="text-reset">Reviews</a>
+          <button
+                type="button"
+                className="btn btn-link  text-capitalize button-pop-out"
+                style={linkStyle}
+                onClick={() => customScroll('reviews')}
+              >
+                Reviews
+          </button>
           </p>
           <p>
-            <a href="#aboutus" class="text-reset">About Us</a>
+          <button
+                type="button"
+                className="btn btn-link  text-capitalize button-pop-out"
+                style={linkStyle}
+                onClick={() => customScroll('aboutus')}
+              >
+                About Us
+          </button>
           </p>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

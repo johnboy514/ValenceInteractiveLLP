@@ -52,7 +52,7 @@ function Home() {
   window.addEventListener("scroll", reveal);
   return (
     <div>
-<section class="text-center">
+<section class="text-center" id="home">
   <div class="p-5 bg-image" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1531771686035-25f47595c87a?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         height: "900px",
@@ -269,7 +269,7 @@ function Home() {
     <div class="carousel-item active">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 button-pop-out">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -289,7 +289,7 @@ function Home() {
             </ul>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4 button-pop-out d-none d-lg-block">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -311,7 +311,7 @@ function Home() {
             </ul>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4 button-pop-out d-none d-lg-block">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -337,7 +337,7 @@ function Home() {
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 button-pop-out">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -357,7 +357,7 @@ function Home() {
             </ul>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4 button-pop-out d-none d-lg-block">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -379,7 +379,7 @@ function Home() {
             </ul>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4 button-pop-out d-none d-lg-block">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -405,7 +405,7 @@ function Home() {
     <div class="carousel-item">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 button-pop-out">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -425,7 +425,7 @@ function Home() {
             </ul>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4 button-pop-out d-none d-lg-block">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -447,7 +447,7 @@ function Home() {
             </ul>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
+          <div class="col-lg-4 button-pop-out d-none d-lg-block">
             <img class="rounded-circle shadow-1-strong mb-4"
               src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar"
               style={{width: "150px"}} />
@@ -471,12 +471,12 @@ function Home() {
     </div>
   </div>
 </div>
-<section class="text-center" id='aboutus'>
+<section class="text-center">
   <div class="p-5 bg-image" style={{
         backgroundColor: '#003459',
         height: "300px",
         marginBottom: "-150px"}}></div>
-  <div class="row">
+  <div class="row"  id='aboutus'>
     <div class="col-md-6 reveal">
       <div class="card mx-4 mx-md-5 shadow-5-strong mt-5" style={{
           background: "hsla(0, 0%, 100%, 0.8)",
@@ -528,7 +528,7 @@ function Home() {
     </div>
     <center>
       <button type="button" class="btn btn-rounded btn-lg button-pop-out" style={{maxWidth: '200px', backgroundColor: '#00A8E8', color: 'white'}}>
-        Contact Us
+        Message Us
       </button>
     </center>
     <div class="d-flex justify-content-between text-center mt-3 mx-5">
