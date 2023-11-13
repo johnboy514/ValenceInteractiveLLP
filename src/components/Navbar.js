@@ -4,7 +4,7 @@ import devLogo from '../images/Logo.png';
 function NavbarComponent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const navbarHeight = 200; // Adjust this value based on your actual navbar height
+  const navbarHeight = 250; // Adjust this value based on your actual navbar height
 
   const navbarStyle = {
     backgroundColor: '#003459',

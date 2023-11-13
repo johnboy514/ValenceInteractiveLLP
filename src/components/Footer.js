@@ -2,7 +2,7 @@ function Footer() {
   const customScroll = (elementId) => {
     const element = document.getElementById(elementId);
     if (element) {
-      const navbarHeight = 200;
+      const navbarHeight = 250;
       const offset = navbarHeight;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
