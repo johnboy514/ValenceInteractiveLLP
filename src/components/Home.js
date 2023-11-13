@@ -3,6 +3,7 @@ import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
 import UnderConstruction from "../images/UnderConstruction.png";
+import backgroundImage from "../images/background.jpg";
 
 function Home() {
   const items = useMemo(
@@ -53,26 +54,37 @@ function Home() {
   return (
     <div>
 <section class="text-center" id="home">
-  <div class="p-5 bg-image" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1531771686035-25f47595c87a?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-        height: "900px",
-        backgroundSize: "cover",
-        filter: 'brightness(50%)'
-        }}></div>
-
-  <div class="card mx-4 mx-md-5 slideInLeft" style={{
-        marginTop: "-800px",
+  <div class="d-flex justify-content-center">
+    <div class="card slideInLeft" style={{
+        marginTop: "100px",
         background: "hsla(0, 0%, 100%, 0.0)",
         border: 'none',
-        maxWidth: '900px',
-        color: 'white'
-        }}>
-    <div class="card-body">
-
-      <div class="row d-flex justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="fw-bold mb-5" style={{fontSize: '50px', color: 'white'}}>Let us help you develop <br /><span style={{color: '#62b6cb'}}>your dream site!</span></h2>
-            <h3 class="fw-bold mb-3" style={{color: '#bee9e8'}}>Take a look at some of the sites we've made and get in contact!</h3>
+        maxWidth: '800px',
+        color: 'black',
+        boxShadow: 'none'
+    }}>
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-7">
+            <h2 class="fw-bold mb-3" style={{textAlign: 'left', fontSize: '50px', color: '#003459'}}>Let us help create <br /> your ideal<span style={{color: '#62b6cb'}}> website.</span></h2>
+            <h6 class="fw-bold mb-3" style={{textAlign: 'left', color: 'black'}}>Explore a selection of the websites we've expertly developed, and feel free to reach out to initiate a conversation.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card slideInRight" style={{
+        marginTop: "100px",
+        background: "hsla(0, 0%, 100%, 0.0)",
+        border: 'none',
+        maxWidth: '800px',
+        color: 'black',
+        boxShadow: 'none'
+    }}>
+      <div class="card-body">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+          <img src={backgroundImage} alt="Developer" style={{ width: '100%', height: 'auto' }} />
+          </div>
         </div>
       </div>
     </div>
@@ -80,7 +92,7 @@ function Home() {
 </section>
 <center>
 <div className="container text-center my-3" id="projects">
-        <div id="recipeCarousel" style={{marginTop: '200px'}} className="carousel slide slideInBottom" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="recipeCarousel" style={{marginTop: '0px'}} className="carousel slide slideInBottom" data-bs-ride="carousel" data-bs-interval="5000">
           <div className="carousel-inner" role="listbox">
             {duplicatedItems.map((item, index) => (
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>

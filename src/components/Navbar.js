@@ -4,10 +4,10 @@ import devLogo from '../images/Logo.png';
 function NavbarComponent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const navbarHeight = 250; // Adjust this value based on your actual navbar height
+  const navbarHeight = 250;
 
   const navbarStyle = {
-    backgroundColor: '#003459',
+    backgroundColor: 'white',
     position: 'fixed',
     width: '100%',
     zIndex: '10',
@@ -17,7 +17,7 @@ function NavbarComponent() {
   const linkStyle = {
     fontSize: '16px',
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    color: 'black',
     padding: '5px 10px',
     textDecoration: 'none',
     fontFamily: 'Kanit, sans-serif'
@@ -45,7 +45,7 @@ function NavbarComponent() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark" style={navbarStyle}>
+      <nav className="navbar navbar-expand-lg navbar-light" style={navbarStyle}>
         <div className="container">
           <img
             src={devLogo}
