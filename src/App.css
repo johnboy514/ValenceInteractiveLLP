@@ -102,3 +102,10 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+.card1 {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  min-height: 500px;
+}

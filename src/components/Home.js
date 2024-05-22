@@ -3,36 +3,39 @@ import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
 import UnderConstruction from "../images/UnderConstruction.png";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function Home() {
-  const items = useMemo(
-    () => [
-      { id: 1, image: Yoga, link: 'https://rjo6615.github.io/yogatemplate' },
-      { id: 2, image: Landscaping, link: 'https://johnboy514.github.io/landscapingwildbergamot' },
-      { id: 3, image: Handyman, link: 'https://rjo6615.github.io/handymantemplate' },
-      { id: 4, image: UnderConstruction, link: '/' },
-    ],
-    []
-  );
-  const duplicatedItems = useMemo(() => [...items, ...items], [items]);
+  // const items = useMemo(
+  //   () => [
+  //     { id: 1, image: Yoga, link: 'https://rjo6615.github.io/yogatemplate' },
+  //     { id: 2, image: Landscaping, link: 'https://johnboy514.github.io/landscapingwildbergamot' },
+  //     { id: 3, image: Handyman, link: 'https://rjo6615.github.io/handymantemplate' },
+  //     { id: 4, image: UnderConstruction, link: '/' },
+  //   ],
+  //   []
+  // );
+  // const duplicatedItems = useMemo(() => [...items, ...items], [items]);
 
-  useEffect(() => {
-    const createCarouselItems = () => {
-      let totalItems = items.length;
-      let slides = Math.ceil(totalItems / 3);
+  // useEffect(() => {
+  //   const createCarouselItems = () => {
+  //     let totalItems = items.length;
+  //     let slides = Math.ceil(totalItems / 3);
 
-      let tempCarouselItems = [];
+  //     let tempCarouselItems = [];
 
-      for (let i = 0; i < slides; i++) {
-        let startIdx = i * 3;
-        let endIdx = startIdx + 3;
-        let slideItems = items.slice(startIdx, endIdx);
+  //     for (let i = 0; i < slides; i++) {
+  //       let startIdx = i * 3;
+  //       let endIdx = startIdx + 3;
+  //       let slideItems = items.slice(startIdx, endIdx);
 
-        tempCarouselItems.push(slideItems);
-      }
-    };
-    createCarouselItems();
-  }, [items]);
+  //       tempCarouselItems.push(slideItems);
+  //     }
+  //   };
+  //   createCarouselItems();
+  // }, [items]);
 
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
@@ -45,11 +48,31 @@ function Home() {
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
       } else {
-        reveals[i].classList.remove("active");
+        // reveals[i].classList.remove("active");
       }
     }
   }  
   window.addEventListener("scroll", reveal);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true, // Enable auto scroll
+    autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <div>
 <section class="text-center" id="home">
@@ -79,7 +102,7 @@ function Home() {
   </div>
 </section>
 <center>
-<div className="container text-center my-3" id="projects">
+{/* <div className="container text-center my-3" id="projects">
         <div id="recipeCarousel" style={{marginTop: '200px'}} className="carousel slide slideInBottom" data-bs-ride="carousel" data-bs-interval="5000">
           <div className="carousel-inner" role="listbox">
             {duplicatedItems.map((item, index) => (
@@ -116,11 +139,93 @@ function Home() {
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
-      </div>
-        <div style={{marginTop: '450px'}}>
+      </div> */}
+        {/* Carousel inside the card */}
+        <div className="container text-center" style={{marginTop: "600px"}}>
+      <Slider {...settings}>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://media.istockphoto.com/id/1322842973/photo/diverse-business-people-putting-their-hands-together-in-cirle.jpg?s=612x612&w=0&k=20&c=9BAYCv8tAsgYPQdTsFxLzLJsmt6tGYE5Etwd63OccxQ=" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Team Building</div>
+              <div className="description">Enhance team bonding with our tailored Yoga & Sound Experience for team building events.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://media.istockphoto.com/id/609072850/photo/shes-bringing-some-of-her-bright-ideas-to-the-front.jpg?s=612x612&w=0&k=20&c=w3ITNv_rwk8ET0H272kCrAUf2kc9kRmen3mvbmDUGqo=" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Leadership Events</div>
+              <div className="description">Foster leadership skills and mindfulness in leadership events with our unique experience.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://thumbs.dreamstime.com/b/wellness-wellbeing-health-healthy-lifestyle-concept-72002474.jpg" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Wellness Conferences</div>
+              <div className="description">Elevate wellness conferences with our unique blend of yoga, sound, and meditation sessions.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://berkscountyliving.com/downloads/18196/download/iStock-918933880.jpg?cb=1155e4a7652ab617e102986ad35ab972" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Birthday Parties</div>
+              <div className="description">Celebrate birthdays with a special Yoga + Sound Experience that adds joy and relaxation to the occasion.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://www.adventurebook.com/connect/wp-content/uploads/sites/2/2023/02/girls-night-in-ideas.jpg" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Girls Night In</div>
+              <div className="description">Create unforgettable memories with your friends during a relaxing and fun Girls Night In event.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://www.booksurfcamps.com/static/files/images/ir/nt/it/hk/content.jpg" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Beach Parties</div>
+              <div className="description">Enjoy the soothing sounds of yoga and crystal bowls at beach parties for a unique and memorable experience.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div className="container text-center my-3">
+        <div className="col-md-12">
+          <div className="card card1 card-body position-relative">
+            <img className="img-fluid image1" src="https://bunniesbythebay.com/cdn/shop/articles/Baby_Shower_lifestyle-websize_1024x.jpg?v=1620627090" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <div className="overlay">
+              <div className="title">Baby Showers</div>
+              <div className="description">Celebrate the upcoming arrival of a new life with a peaceful and rejuvenating Yoga & Sound Experience.</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </Slider>
+    </div>
+        <div style={{marginTop: '100px'}}>
         </div>
     </center> 
-    <section class="text-center reveal" id="pricing" style={{marginTop: '-400px'}}>
+    <section class="text-center reveal" id="pricing" style={{marginTop: '0px'}}>
   <div class="btn-group mb-4" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-dark active">Monthly billing</button>
     <button type="button" class="btn btn-light">
