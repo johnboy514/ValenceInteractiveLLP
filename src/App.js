@@ -12,8 +12,8 @@ function App() {
     <Router>
         <Navbar />
         <Routes>
-          <Route path="/webdevtemplate" element={<Home />} />
-          <Route path="*" element={<Navigate to="/webdevtemplate"/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
     </Router>
