@@ -1,4 +1,4 @@
-import {React, useEffect, useMemo} from "react";
+import {React} from "react";
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
@@ -8,35 +8,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 function Home() {
-  // const items = useMemo(
-  //   () => [
-  //     { id: 1, image: Yoga, link: 'https://rjo6615.github.io/yogatemplate' },
-  //     { id: 2, image: Landscaping, link: 'https://johnboy514.github.io/landscapingwildbergamot' },
-  //     { id: 3, image: Handyman, link: 'https://rjo6615.github.io/handymantemplate' },
-  //     { id: 4, image: UnderConstruction, link: '/' },
-  //   ],
-  //   []
-  // );
-  // const duplicatedItems = useMemo(() => [...items, ...items], [items]);
-
-  // useEffect(() => {
-  //   const createCarouselItems = () => {
-  //     let totalItems = items.length;
-  //     let slides = Math.ceil(totalItems / 3);
-
-  //     let tempCarouselItems = [];
-
-  //     for (let i = 0; i < slides; i++) {
-  //       let startIdx = i * 3;
-  //       let endIdx = startIdx + 3;
-  //       let slideItems = items.slice(startIdx, endIdx);
-
-  //       tempCarouselItems.push(slideItems);
-  //     }
-  //   };
-  //   createCarouselItems();
-  // }, [items]);
-
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -58,7 +29,7 @@ function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true, // Enable auto scroll
@@ -102,51 +73,23 @@ function Home() {
   </div>
 </section>
 <center>
-{/* <div className="container text-center my-3" id="projects">
-        <div id="recipeCarousel" style={{marginTop: '200px'}} className="carousel slide slideInBottom" data-bs-ride="carousel" data-bs-interval="5000">
-          <div className="carousel-inner" role="listbox">
-            {duplicatedItems.map((item, index) => (
-              <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                <div className="row">
-                  {[0, 1, 2].map((colIndex) => {
-                    const currentIndex = index + colIndex;
-                    const carouselItem = duplicatedItems[currentIndex % duplicatedItems.length];
-                    return (
-                      
-                      <div className="col-md-4" key={colIndex}>
-                        <a href={carouselItem.link}>
-                        <div className="card">
-                          <div className="card-img">
-                            <img
-                              src={carouselItem.image}
-                              className="img-fluid"
-                              alt={`Slide ${carouselItem.id}`}
-                            />
-                          </div>
-                        </div>
-                        </a>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-          <button className="carousel-control-prev bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button className="carousel-control-next bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div> */}
         {/* Carousel inside the card */}
-        <div className="container text-center" style={{marginTop: "600px"}}>
+        <div className="text-center" style={{marginTop: "600px"}}>
+          <center>
+          <div style={{maxWidth: "600px"}}>
+        <h3>Our Work</h3>
+        <p>Explore a selection of websites we've built, 
+          each demonstrating our skills in design, functionality, 
+          and user experience. From sleek and modern interfaces 
+          to robust and dynamic applications, these projects 
+          highlight our commitment to quality and innovation.</p>
+          </div>
+          </center>
       <Slider {...settings}>
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://media.istockphoto.com/id/1322842973/photo/diverse-business-people-putting-their-hands-together-in-cirle.jpg?s=612x612&w=0&k=20&c=9BAYCv8tAsgYPQdTsFxLzLJsmt6tGYE5Etwd63OccxQ=" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <img className="img-fluid image1" src={Yoga} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
             <div className="overlay">
               <div className="title">Team Building</div>
               <div className="description">Enhance team bonding with our tailored Yoga & Sound Experience for team building events.</div>
@@ -157,7 +100,7 @@ function Home() {
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://media.istockphoto.com/id/609072850/photo/shes-bringing-some-of-her-bright-ideas-to-the-front.jpg?s=612x612&w=0&k=20&c=w3ITNv_rwk8ET0H272kCrAUf2kc9kRmen3mvbmDUGqo=" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <img className="img-fluid image1" src={Landscaping} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
             <div className="overlay">
               <div className="title">Leadership Events</div>
               <div className="description">Foster leadership skills and mindfulness in leadership events with our unique experience.</div>
@@ -168,7 +111,7 @@ function Home() {
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://thumbs.dreamstime.com/b/wellness-wellbeing-health-healthy-lifestyle-concept-72002474.jpg" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <img className="img-fluid image1" src={Handyman} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
             <div className="overlay">
               <div className="title">Wellness Conferences</div>
               <div className="description">Elevate wellness conferences with our unique blend of yoga, sound, and meditation sessions.</div>
@@ -179,7 +122,7 @@ function Home() {
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://berkscountyliving.com/downloads/18196/download/iStock-918933880.jpg?cb=1155e4a7652ab617e102986ad35ab972" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
+            <img className="img-fluid image1" src={UnderConstruction} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
             <div className="overlay">
               <div className="title">Birthday Parties</div>
               <div className="description">Celebrate birthdays with a special Yoga + Sound Experience that adds joy and relaxation to the occasion.</div>
@@ -222,10 +165,8 @@ function Home() {
         </div>
       </Slider>
     </div>
-        <div style={{marginTop: '100px'}}>
-        </div>
     </center> 
-    <section class="text-center reveal" id="pricing" style={{marginTop: '0px'}}>
+    <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
   <div class="btn-group mb-4" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-dark active">Monthly billing</button>
     <button type="button" class="btn btn-light">
