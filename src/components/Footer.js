@@ -22,7 +22,7 @@ function Footer() {
     return (       
 <div>
 <footer class="text-center text-lg-start bg-white text-muted">
-<section className="d-flex justify-content-center p-4 border-bottom">
+{/* <section className="d-flex justify-content-center p-4 border-bottom">
           <div className="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
           </div>
@@ -46,13 +46,13 @@ function Footer() {
               <i className="fab fa-github"></i>
             </a>
           </div>
-        </section>
+        </section> */}
   <section class="">
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>WebDevBoyz
+            <i class="fas fa-gem me-3 text-secondary"></i>Valence Interactive LLP
           </h6>
           <p>
            Empower your online presence with our expert website development services, 
@@ -126,16 +126,16 @@ function Footer() {
           <p><i class="fas fa-home me-3 text-secondary"></i>United States</p>
           <p>
             <i class="fas fa-envelope me-3 text-secondary"></i>
-            webdevboyz@gmail.com
+            valenceinteractivellp@gmail.com
           </p>
           <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 555 555 5555</p>
         </div>
       </div>
     </div>
   </section>
-  <div class="text-center p-4 text-white" style={{backgroundColor: "#003459"}}>
-    © 2023 Copyright:
-    <a class="text-reset fw-bold mx-2" href="/">WebDevBoyz</a>
+  <div class="text-center p-4 text-white" style={{backgroundColor: "#16918b"}}>
+    © 2024 Copyright:
+    <a class="text-reset fw-bold mx-2" href="/">Valence Interactive LLP</a>
   </div>
 </footer>
 </div>
