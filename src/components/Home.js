@@ -72,7 +72,7 @@ function Home() {
 </section>
 <center>
         {/* Carousel inside the card */}
-        <div className="text-center" style={{marginTop: "350px"}}>
+        <div className="text-center reveal" id="projects" style={{marginTop: "350px"}}>
           <center>
           <div style={{maxWidth: "800px", fontFamily: '"Teachers", sans-serif'}}>
         <h3>Our Work</h3>
@@ -83,7 +83,7 @@ function Home() {
           highlight our commitment to quality and innovation.</p>
           </div>
           </center>
-      <Slider {...settings}>
+      <Slider {...settings} className="reveal">
       <a href="https://rjo6615.github.io/breeyoga/" target="_blank" rel="noreferrer">
         <div className="container text-center my-3">
         <div className="col-md-12">
