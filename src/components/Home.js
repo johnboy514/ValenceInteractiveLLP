@@ -1,8 +1,8 @@
 import {React} from "react";
 import Landscaping from "../images/WildBergamot.png";
-import Yoga from "../images/YogaTemplate.png";
+import Yoga from "../images/BreeYoga.png";
 import Handyman from "../images/HandymanTemplate.png";
-import UnderConstruction from "../images/UnderConstruction.png";
+import DogWalker from "../images/LudlowDogWalker.png";
 import Hero from "../images/hero.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -84,83 +84,42 @@ function Home() {
           </div>
           </center>
       <Slider {...settings}>
+      <a href="https://rjo6615.github.io/breeyoga/" target="_blank" rel="noreferrer">
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
             <img className="img-fluid image1" src={Yoga} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Team Building</div>
-              <div className="description">Enhance team bonding with our tailored Yoga & Sound Experience for team building events.</div>
-            </div>
           </div>
         </div>
         </div>
+        </a>
+        <a href="https://wildbergamot.net/" target="_blank" rel="noreferrer">
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
             <img className="img-fluid image1" src={Landscaping} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Leadership Events</div>
-              <div className="description">Foster leadership skills and mindfulness in leadership events with our unique experience.</div>
-            </div>
           </div>
         </div>
         </div>
+        </a>
+        <a href="https://buildingonexperience.com/" target="_blank" rel="noreferrer">
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
             <img className="img-fluid image1" src={Handyman} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Wellness Conferences</div>
-              <div className="description">Elevate wellness conferences with our unique blend of yoga, sound, and meditation sessions.</div>
-            </div>
           </div>
         </div>
         </div>
+        </a>
+        <a href="https://ludlowdogwalker.com/" target="_blank" rel="noreferrer">
         <div className="container text-center my-3">
         <div className="col-md-12">
           <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src={UnderConstruction} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Birthday Parties</div>
-              <div className="description">Celebrate birthdays with a special Yoga + Sound Experience that adds joy and relaxation to the occasion.</div>
-            </div>
+            <img className="img-fluid image1" src={DogWalker} alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
           </div>
         </div>
         </div>
-        <div className="container text-center my-3">
-        <div className="col-md-12">
-          <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://www.adventurebook.com/connect/wp-content/uploads/sites/2/2023/02/girls-night-in-ideas.jpg" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Girls Night In</div>
-              <div className="description">Create unforgettable memories with your friends during a relaxing and fun Girls Night In event.</div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div className="container text-center my-3">
-        <div className="col-md-12">
-          <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://www.booksurfcamps.com/static/files/images/ir/nt/it/hk/content.jpg" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Beach Parties</div>
-              <div className="description">Enjoy the soothing sounds of yoga and crystal bowls at beach parties for a unique and memorable experience.</div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div className="container text-center my-3">
-        <div className="col-md-12">
-          <div className="card card1 card-body position-relative">
-            <img className="img-fluid image1" src="https://bunniesbythebay.com/cdn/shop/articles/Baby_Shower_lifestyle-websize_1024x.jpg?v=1620627090" alt="Slide 1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} />
-            <div className="overlay">
-              <div className="title">Baby Showers</div>
-              <div className="description">Celebrate the upcoming arrival of a new life with a peaceful and rejuvenating Yoga & Sound Experience.</div>
-            </div>
-          </div>
-        </div>
-        </div>
+        </a>
       </Slider>
     </div>
     </center> 
