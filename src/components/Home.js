@@ -64,7 +64,7 @@ function Home() {
   
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8" style={{fontFamily: '"Teachers", sans-serif'}}>
-          <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Let us help you develop <br /><span style={{color: 'black'}}>your dream site!</span></h2>
+          <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Custom Website <br /><span style={{color: 'black'}}>Development and Design.</span></h2>
             {/* <h3 class=" mb-3" style={{color: 'black'}}>Take a look at some of the sites we've made and get in contact!</h3> */}
         </div>
     </div>
@@ -517,7 +517,7 @@ function Home() {
 </div>
 <section class="text-center">
   <div class="p-5 bg-image" style={{
-        backgroundColor: '#003459',
+        backgroundColor: '#16918b',
         height: "300px",
         marginBottom: "-150px"}}></div>
   <div class="row"  id='aboutus'>
@@ -531,13 +531,12 @@ function Home() {
           <div class="row d-flex justify-content-center">
             <div class="col-lg-8">
               <h2 class="fw-bold mb-5">About Us</h2>
-              <h6>"At WebDevBoyz, we believe in more than just lines of code –
+              <h6>"At Valence Interactive LLP, we believe in more than just lines of code –
                  we believe in creating meaningful connections between businesses and their 
                  audiences. With a collaborative approach, we work closely with our clients 
                  to understand their unique needs, tailoring every project to reflect their brand identity. 
-                 Whether you're a startup looking to make a bold entrance or an established enterprise 
+                 Whether you are a startup looking to make a bold entrance or an established enterprise 
                  seeking a digital facelift, we're here to bring your web development dreams to life. 
-                 Let's embark on this journey together and build a digital future that not only meets but exceeds your expectations."
               </h6>
             </div>
           </div>
@@ -561,17 +560,17 @@ function Home() {
         <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
           class="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
         <h4 class="mb-2">Robert J. Obernier</h4>
-        <p class="text-muted mx-5">Owner/Developer <span class="mx-2">|</span> WebDevBoyz</p>
+        <p class="text-muted mx-5">Owner/Partner <span class="mx-2">|</span> Web Developer</p>
       </div>
       <div class="text-center">
         <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
           class="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
         <h4 class="mb-2">John Ifert-Miller</h4>
-        <p class="text-muted mx-5">Owner/Developer <span class="mx-2">|</span> WebDevBoyz</p>
+        <p class="text-muted mx-5">Owner/Partner <span class="mx-2">|</span> Web Developer</p>
       </div>
     </div>
     <center>
-      <button type="button" class="btn btn-rounded btn-lg button-pop-out" style={{maxWidth: '200px', backgroundColor: '#00A8E8', color: 'white'}}>
+      <button type="button" class="btn btn-rounded btn-lg button-pop-out" style={{maxWidth: '200px', backgroundColor: '#16918b', color: 'white'}}>
         Message Us
       </button>
     </center>
