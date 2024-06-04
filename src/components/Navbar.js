@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import devLogo from '../images/Logo.png';
 
 function NavbarComponent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTop, setIsTop] = useState(true);
 
   const navbarHeight = 250; // Adjust this value based on your actual navbar height
 
   const navbarStyle = {
-    backgroundColor: '#003459',
+    backgroundColor: isTop ? 'transparent' : 'white',
     position: 'fixed',
     width: '100%',
     zIndex: '10',
-    height: `75px`
+    height: `75px`,
+    transition: 'background-color 0.3s ease'
   };
 
   const linkStyle = {
     fontSize: '16px',
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    color: 'black',
     padding: '5px 10px',
     textDecoration: 'none',
-    fontFamily: 'Kanit, sans-serif'
+    fontFamily: '"Teachers", sans-serif'
   };
 
   const customScroll = (elementId) => {
@@ -42,6 +44,22 @@ function NavbarComponent() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTop(true);
+      } else {
+        setIsTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div>
@@ -152,21 +170,21 @@ function NavbarComponent() {
             ></button>
             </div>
             <div className="modal-body">
-            <div class="d-flex mb-3">
+            <div className="d-flex mb-3">
             <a href="https://github.com/rjo6615" style={{textDecoration: 'none'}} className="button-pop-out">
-              <div class="text-center mr-4">
+              <div className="text-center mr-4">
                 <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-                  class="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-                <h4 class="mb-2">Robert J. Obernier</h4>
-                <p class="text-muted mx-5">Owner/Developer <span class="mx-2"></span> WebDevBoyz</p>
+                  className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
+                <h4 className="mb-2">Robert J. Obernier</h4>
+                <p className="text-muted mx-5">Owner/Developer <span className="mx-2"></span> WebDevBoyz</p>
               </div>
               </a>
               <a href="https://github.com/johnboy514" style={{textDecoration: 'none'}} className="button-pop-out">
-              <div class="text-center">
+              <div className="text-center">
                 <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-                  class="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-                <h4 class="mb-2">John Ifert-Miller</h4>
-                <p class="text-muted mx-5">Owner/Developer <span class="mx-2"></span> WebDevBoyz</p>
+                  className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
+                <h4 className="mb-2">John Ifert-Miller</h4>
+                <p className="text-muted mx-5">Owner/Developer <span className="mx-2"></span> WebDevBoyz</p>
               </div>
               </a>
             </div>

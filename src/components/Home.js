@@ -3,6 +3,7 @@ import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/YogaTemplate.png";
 import Handyman from "../images/HandymanTemplate.png";
 import UnderConstruction from "../images/UnderConstruction.png";
+import Hero from "../images/hero.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -48,35 +49,32 @@ function Home() {
     <div>
 <section class="text-center" id="home">
   <div class="p-5 bg-image" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1531771686035-25f47595c87a?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+        backgroundImage: `url(${Hero})`,
         height: "900px",
         backgroundSize: "cover",
-        filter: 'brightness(50%)'
+        filter: 'brightness(100%)'
         }}></div>
 
-  <div class="card mx-4 mx-md-5 slideInLeft" style={{
-        marginTop: "-800px",
+  <div class="card1 mx-4 mx-md-1 slideInLeft" style={{
+        marginTop: "-675px",
         background: "hsla(0, 0%, 100%, 0.0)",
         border: 'none',
         maxWidth: '900px',
-        color: 'white'
         }}>
-    <div class="card-body">
-
+  
       <div class="row d-flex justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="fw-bold mb-5" style={{fontSize: '50px', color: 'white'}}>Let us help you develop <br /><span style={{color: '#62b6cb'}}>your dream site!</span></h2>
-            <h3 class="fw-bold mb-3" style={{color: '#bee9e8'}}>Take a look at some of the sites we've made and get in contact!</h3>
+        <div class="col-lg-8" style={{fontFamily: '"Teachers", sans-serif'}}>
+          <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Let us help you develop <br /><span style={{color: 'black'}}>your dream site!</span></h2>
+            {/* <h3 class=" mb-3" style={{color: 'black'}}>Take a look at some of the sites we've made and get in contact!</h3> */}
         </div>
-      </div>
     </div>
   </div>
 </section>
 <center>
         {/* Carousel inside the card */}
-        <div className="text-center" style={{marginTop: "600px"}}>
+        <div className="text-center" style={{marginTop: "350px"}}>
           <center>
-          <div style={{maxWidth: "600px"}}>
+          <div style={{maxWidth: "800px", fontFamily: '"Teachers", sans-serif'}}>
         <h3>Our Work</h3>
         <p>Explore a selection of websites we've built, 
           each demonstrating our skills in design, functionality, 
