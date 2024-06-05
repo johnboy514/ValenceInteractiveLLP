@@ -32,7 +32,7 @@ function Home() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     autoplay: true, // Enable auto scroll
     autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
     responsive: [
@@ -65,13 +65,13 @@ function Home() {
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8" style={{fontFamily: '"Teachers", sans-serif'}}>
           <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Custom Website <br /><span style={{color: 'black'}}>Development and Design.</span></h2>
-            {/* <h3 class=" mb-3" style={{color: 'black'}}>Take a look at some of the sites we've made and get in contact!</h3> */}
+
         </div>
     </div>
   </div>
 </section>
 <center>
-        {/* Carousel inside the card */}
+    
         <div className="text-center reveal" id="projects" style={{marginTop: "350px"}}>
           <center>
           <div style={{maxWidth: "800px", fontFamily: '"Teachers", sans-serif'}}>
@@ -123,7 +123,7 @@ function Home() {
       </Slider>
     </div>
     </center> 
-    <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
+   {/*  <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
   <div class="btn-group mb-4" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-dark active">Monthly billing</button>
     <button type="button" class="btn btn-light">
@@ -550,7 +550,7 @@ function Home() {
   </div>
 </div>
 </div>
-</section>
+</section> */}
 </div>
   );
 }
