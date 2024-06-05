@@ -160,7 +160,7 @@ function NavbarComponent() {
       <div className={`modal fade ${isModalOpen ? 'show' : ''}`} tabIndex="-1" aria-hidden="true" style={{ display: isModalOpen ? 'block' : 'none' }}>
         <div className="modal-dialog">
           <div className="modal-content" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
-            <div className="modal-header" style={{ backgroundColor: 'rgba(0, 52, 89, 1)', color: 'white' }}>
+            <div className="modal-header" style={{ backgroundColor: '#16918b', color: 'white' }}>
               <h5 className="modal-title">GitHub Links</h5>
               <button
               type="button"
@@ -171,20 +171,20 @@ function NavbarComponent() {
             </div>
             <div className="modal-body">
             <div className="d-flex mb-3">
-            <a href="https://github.com/rjo6615" style={{textDecoration: 'none'}} className="button-pop-out">
+            <a href="https://github.com/rjo6615" style={{textDecoration: 'none'}} className="button-pop-out text-dark">
               <div className="text-center mr-4">
                 <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
                   className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
                 <h4 className="mb-2">Robert J. Obernier</h4>
-                <p className="text-muted mx-5">Owner/Developer <span className="mx-2"></span> WebDevBoyz</p>
+                <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
               </div>
               </a>
-              <a href="https://github.com/johnboy514" style={{textDecoration: 'none'}} className="button-pop-out">
+              <a href="https://github.com/johnboy514" style={{textDecoration: 'none'}} className="button-pop-out text-dark">
               <div className="text-center">
                 <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
                   className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
                 <h4 className="mb-2">John Ifert-Miller</h4>
-                <p className="text-muted mx-5">Owner/Developer <span className="mx-2"></span> WebDevBoyz</p>
+                <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
               </div>
               </a>
             </div>
