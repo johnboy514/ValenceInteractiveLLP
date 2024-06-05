@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.3722ae64.css",
-    "main.js": "/static/js/main.be41a62f.js",
+    "main.css": "/static/css/main.196134ca.css",
+    "main.js": "/static/js/main.b5bcbdb3.js",
     "static/js/787.73f6c260.chunk.js": "/static/js/787.73f6c260.chunk.js",
-    "static/media/WildBergamot.png": "/static/media/WildBergamot.41a781ee32e148877515.png",
-    "static/media/HandymanTemplate.png": "/static/media/HandymanTemplate.3444edcaeb4c47eb35e4.png",
-    "static/media/YogaTemplate.png": "/static/media/YogaTemplate.90c1747244558fe09163.png",
-    "static/media/UnderConstruction.png": "/static/media/UnderConstruction.684877f569466d08c2cb.png",
+    "static/media/WildBergamot.png": "/static/media/WildBergamot.26bbda5e64efa6e44133.png",
+    "static/media/BreeYoga.png": "/static/media/BreeYoga.92d01a66c6a70882d2c6.png",
+    "static/media/LudlowDogWalker.png": "/static/media/LudlowDogWalker.14a742425d1d63f04241.png",
+    "static/media/HandymanTemplate.png": "/static/media/HandymanTemplate.f91ce8fec883fb856055.png",
+    "static/media/hero.jpg": "/static/media/hero.dfefdcc22b32ff364a6c.jpg",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
     "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
-    "static/media/Logo.png": "/static/media/Logo.611e5b56a1a885212091.png",
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -21,12 +21,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.3722ae64.css.map": "/static/css/main.3722ae64.css.map",
-    "main.be41a62f.js.map": "/static/js/main.be41a62f.js.map",
+    "main.196134ca.css.map": "/static/css/main.196134ca.css.map",
+    "main.b5bcbdb3.js.map": "/static/js/main.b5bcbdb3.js.map",
     "787.73f6c260.chunk.js.map": "/static/js/787.73f6c260.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3722ae64.css",
-    "static/js/main.be41a62f.js"
+    "static/css/main.196134ca.css",
+    "static/js/main.b5bcbdb3.js"
   ]
 }
