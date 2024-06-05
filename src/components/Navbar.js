@@ -12,7 +12,7 @@ function NavbarComponent() {
     position: 'fixed',
     width: '100%',
     zIndex: '10',
-    height: `75px`,
+    height: `100px`,
     transition: 'background-color 0.3s ease'
   };
 
