@@ -123,7 +123,7 @@ function Home() {
       </Slider>
     </div>
     </center> 
-   {/*  <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
+    <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
   <div class="btn-group mb-4" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-dark active">Monthly billing</button>
     <button type="button" class="btn btn-light">
@@ -550,7 +550,7 @@ function Home() {
   </div>
 </div>
 </div>
-</section> */}
+</section>
 </div>
   );
 }
