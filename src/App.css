@@ -111,3 +111,8 @@
   height: auto;
   min-height: 400px;
 }
+
+/* This fixed horizontal scroll on browser */
+body {
+  overflow-x: hidden;
+}
