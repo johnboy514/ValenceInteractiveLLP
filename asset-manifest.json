@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.196134ca.css",
-    "main.js": "/static/js/main.b5bcbdb3.js",
+    "main.js": "/static/js/main.501f3170.js",
     "static/js/787.73f6c260.chunk.js": "/static/js/787.73f6c260.chunk.js",
     "static/media/WildBergamot.png": "/static/media/WildBergamot.26bbda5e64efa6e44133.png",
     "static/media/BreeYoga.png": "/static/media/BreeYoga.92d01a66c6a70882d2c6.png",
@@ -22,11 +22,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.196134ca.css.map": "/static/css/main.196134ca.css.map",
-    "main.b5bcbdb3.js.map": "/static/js/main.b5bcbdb3.js.map",
+    "main.501f3170.js.map": "/static/js/main.501f3170.js.map",
     "787.73f6c260.chunk.js.map": "/static/js/787.73f6c260.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.196134ca.css",
-    "static/js/main.b5bcbdb3.js"
+    "static/js/main.501f3170.js"
   ]
 }
