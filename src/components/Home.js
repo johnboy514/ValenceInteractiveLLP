@@ -490,7 +490,7 @@ function Home() {
           <div class="row d-flex justify-content-center">
             <div class="col-lg-8">
               <h2 class="fw-bold mb-5">About Us</h2>
-              <h6>"At Valence Interactive LLP, we believe in more than just lines of code –
+              <h6>At Valence Interactive LLP, we believe in more than just lines of code
                  we believe in creating meaningful connections between businesses and their 
                  audiences. With a collaborative approach, we work closely with our clients 
                  to understand their unique needs, tailoring every project to reflect their brand identity. 
