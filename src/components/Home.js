@@ -1,4 +1,4 @@
-import {React} from "react";
+import {React, useEffect, useRef} from "react";
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/BreeYoga.png";
 import Handyman from "../images/HandymanTemplate.png";
@@ -25,6 +25,35 @@ function Home() {
     }
   }  
   window.addEventListener("scroll", reveal);
+
+  const formRef = useRef(null);
+
+  useEffect(() => {
+      const formElement = formRef.current;
+
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  formElement.classList.add('animated-form');
+                  observer.unobserve(formElement); // Stop observing after the animation is added
+              }
+          });
+      }, {
+          threshold: 0.1
+      });
+
+      if (formElement) {
+          observer.observe(formElement);
+      }
+
+      // Cleanup the observer on component unmount
+      return () => {
+          if (formElement) {
+              observer.unobserve(formElement);
+          }
+      };
+  }, []);
+
 
   const settings = {
     dots: true,
@@ -474,6 +503,63 @@ function Home() {
     </div>
   </div>
 </div>
+<section class="">
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: "hsl(0, 0%, 96%)"}}>
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            The best offer <br />
+            <span style={{color: "#16918b"}}>for your business</span>
+          </h1>
+          <p style={{color: "hsl(217, 10%, 50.8%)"}}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+            quibusdam tempora at cupiditate quis eum maiores libero
+            veritatis? Dicta facilis sint aliquid ipsum atque?
+          </p>
+        </div>
+        <div class="col-lg-6 mb-5 mb-lg-0">
+    <div class="card" ref={formRef}>
+        <div class="card-body py-5 px-md-5">
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div data-mdb-input-init class="formOutline">
+                            <input type="text" id="form3Example1" class="form-control" />
+                            <label class="form-label" for="form3Example1">First name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div data-mdb-input-init class="formOutline">
+                            <input type="text" id="form3Example2" class="form-control" />
+                            <label class="form-label" for="form3Example2">Last name</label>
+                        </div>
+                    </div>
+                </div>
+                <div data-mdb-input-init class="formOutline mb-4">
+                    <input type="email" id="form3Example3" class="form-control" />
+                    <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+                <div data-mdb-input-init class="formOutline mb-4">
+                    <input type="phone" id="form3Example4" class="form-control" />
+                    <label class="form-label" for="form3Example4">Phone Number</label>
+                </div>
+                <div data-mdb-input-init class="formOutline mb-4">
+                    <textarea rows="4" id="form3Example4" class="form-control"></textarea>
+                    <label class="form-label" for="form3Example4">How can we help you?</label>
+                </div>
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section class="text-center">
   <div class="p-5 bg-image" style={{
         backgroundColor: '#16918b',
