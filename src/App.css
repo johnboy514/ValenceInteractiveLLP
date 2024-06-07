@@ -116,3 +116,48 @@
 body {
   overflow-x: hidden;
 }
+
+@keyframes growAndFadeIn {
+  0% {
+      transform: scale(0.1);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.animated-form {
+  animation: growAndFadeIn 1s ease-out;
+}
+
+.formOutline {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.formOutline input,
+.formOutline textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formOutline label {
+  position: absolute;
+  top: -1.25rem;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #555;
+  padding: 0 5px;
+}
+
+.formOutline input:focus,
+.formOutline textarea:focus {
+  border-color: #16918b;
+  outline: none;
+}
