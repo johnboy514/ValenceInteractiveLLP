@@ -136,17 +136,17 @@ function NavbarComponent() {
                 type="button"
                 className="btn btn-link px-3 me-2 text-capitalize button-pop-out"
                 style={linkStyle}
-                onClick={() => customScroll('contactus')}
+                onClick={() => customScroll('contact')}
               >
                 Contact
               </button>
-              <button
+              {/* <button
                 type="button"
                 className="btn me-3 button-pop-out"
                 style={{ backgroundColor: '#16918b', color: 'white' }}
               >
                 Message Us
-              </button>
+              </button> */}
               <button
                 className="btn btn-dark px-3 button-pop-out"
                 onClick={openModal}
