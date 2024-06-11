@@ -53,9 +53,7 @@ function Home() {
           }
       };
   }, []);
-
-
-  const settings = {
+  const projectsCarouselSettings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -64,6 +62,26 @@ function Home() {
     arrows: false,
     autoplay: true, // Enable auto scroll
     autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const headerSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true, // Enable auto scroll
+    autoplaySpeed: 2500, // Set auto scroll speed to 3 seconds
     responsive: [
       {
         breakpoint: 768,
@@ -85,15 +103,34 @@ function Home() {
         }}></div>
 
   <div class="card1 mx-4 mx-md-1 slideInLeft" style={{
-        marginTop: "-675px",
+        marginTop: "-725px",
         background: "hsla(0, 0%, 100%, 0.0)",
         border: 'none',
         maxWidth: '900px',
         }}>
   
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-left">
         <div class="col-lg-8" style={{fontFamily: '"Teachers", sans-serif'}}>
-          <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Custom Website <br /><span style={{color: 'black'}}>Development and Design.</span></h2>
+          <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Allow us to <br />
+          <Slider {...headerSettings}>
+        <div className="container">
+        <div className="col-md-12">         
+          <span style={{color: '#16918b'}}>Develop</span>
+        </div>
+        </div>
+        <div className="container">
+        <div className="col-md-12">         
+          <span style={{color: '#16918b'}}>Design</span>
+        </div>
+        </div>
+        <div className="container">
+        <div className="col-md-12">         
+          <span style={{color: '#16918b'}}>Build</span>
+        </div>
+        </div>
+      </Slider>
+          <span style={{color: 'black'}}>Your Website.</span>
+          </h2>
 
         </div>
     </div>
@@ -101,7 +138,7 @@ function Home() {
 </section>
 <center>
     
-        <div className="text-center reveal" id="projects" style={{marginTop: "350px"}}>
+        <div className="text-center reveal" id="projects" style={{marginTop: "400px"}}>
           <center>
           <div style={{maxWidth: "800px", fontFamily: '"Teachers", sans-serif'}}>
         <h3>Our Work</h3>
@@ -112,7 +149,7 @@ function Home() {
           highlight our commitment to quality and innovation.</p>
           </div>
           </center>
-      <Slider {...settings} className="reveal">
+      <Slider {...projectsCarouselSettings} className="reveal">
       <a href="https://rjo6615.github.io/breeyoga/" target="_blank" rel="noreferrer">
         <div className="container text-center my-3">
         <div className="col-md-12">
