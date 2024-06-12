@@ -149,6 +149,7 @@ function NavbarComponent() {
               </button> */}
               <button
                 className="btn btn-dark px-3 button-pop-out"
+                style={{backgroundColor: "#16918b"}}
                 onClick={openModal}
               >
                 <i className="fab fa-github"></i>
