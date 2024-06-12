@@ -4,6 +4,8 @@ import Yoga from "../images/BreeYoga.png";
 import Handyman from "../images/HandymanTemplate.png";
 import DogWalker from "../images/LudlowDogWalker.png";
 import Hero from "../images/hero.jpg";
+import AboutUs from "../images/aboutUs.jpg";
+import reviewsBG from "../images/reviewsbg.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -82,6 +84,26 @@ function Home() {
     arrows: false,
     autoplay: true, // Enable auto scroll
     autoplaySpeed: 2500, // Set auto scroll speed to 3 seconds
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const reviewsSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true, // Enable auto scroll
+    autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
     responsive: [
       {
         breakpoint: 768,
@@ -190,23 +212,17 @@ function Home() {
     </div>
     </center> 
     <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
-  <div class="btn-group mb-4" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-dark active">Monthly billing</button>
-    <button type="button" class="btn btn-light">
-      Annual billign <small>(2 months FREE)</small>
-    </button>
-  </div>
 </section>
 <div class="row">
   <div class="col-md-3 reveal">
     <div class="card">
-      <div class="mx-2 card-body">
+      <div class="mx-2 card-body" style={{fontFamily: '"Teachers", sans-serif'}}>
         <h5 class="card-title my-2">Hobby</h5>
         <p class="text-muted mb-2">
           All the essentials for starting a business
         </p>
         <p class="h2 fw-bold">$12<small class="text-muted" style={{fontSize: "18px"}}>/mo</small></p>
-        <a href="#/" class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Hobby</a>
+        <a href="#/" style={{backgroundColor: "#16918b"}} class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Hobby</a>
       </div>
       <div class="card-footer">
         <p class="text-uppercase fw-bold" style={{fontSize: "12px"}}>What's included</p>
@@ -225,13 +241,13 @@ function Home() {
   </div>
   <div class="col-md-3 reveal">
     <div class="card border border-dark">
-      <div class="mx-2 card-body">
+      <div class="mx-2 card-body" style={{fontFamily: '"Teachers", sans-serif'}}>
         <h5 class="card-title my-2 ">Freelancer</h5>
         <p class="text-muted">
           All the essentials for starting a business
         </p>
         <p class="h2 fw-bold">$20<small class="text-muted" style={{fontSize: "18px"}}>/mo</small></p>
-        <a href="#/" class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Freelancer</a>
+        <a href="#/" style={{backgroundColor: "#16918b"}} class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Freelancer</a>
       </div>
       <div class="card-footer">
         <p class="text-uppercase fw-bold" style={{fontSize: "12px"}}>What's included</p>
@@ -253,13 +269,13 @@ function Home() {
   </div>
   <div class="col-md-3 reveal">
     <div class="card">
-      <div class="mx-2 card-body">
+      <div class="mx-2 card-body" style={{fontFamily: '"Teachers", sans-serif'}}>
         <h5 class="card-title my-2 ">Startup</h5>
         <p class="text-muted">
           All the essentials for starting a business
         </p>
         <p class="h2 fw-bold">$40<small class="text-muted" style={{fontSize: "18px"}}>/mo</small></p>
-        <a href="#/" class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Startup</a>
+        <a href="#/" style={{backgroundColor: "#16918b"}} class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Startup</a>
       </div>
       <div class="card-footer">
         <p class="text-uppercase fw-bold" style={{fontSize: "12px"}}>What's included</p>
@@ -284,13 +300,13 @@ function Home() {
   </div>
   <div class="col-md-3 reveal">
     <div class="card">
-      <div class="mx-2 card-body">
+      <div class="mx-2 card-body" style={{fontFamily: '"Teachers", sans-serif'}}>
         <h5 class="card-title my-2 ">Enterprise</h5>
         <p class="text-muted">
           All the essentials for starting a business
         </p>
         <p class="h2 fw-bold">$55<small class="text-muted" style={{fontSize: "18px"}}>/mo</small></p>
-        <a href="#/" class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Enterprise</a>
+        <a href="#/" style={{backgroundColor: "#16918b"}} class="btn btn-dark d-block mb-2 mt-3 text-capitalize">Buy Enterprise</a>
       </div>
       <div class="card-footer">
         <p class="text-uppercase fw-bold" style={{fontSize: "12px"}}>What's included</p>
@@ -320,240 +336,99 @@ function Home() {
       </div>
     </div>
   </div>
-</div>   
-<div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center reveal" data-bs-ride="carousel">
-  <div class="d-flex justify-content-center mb-4" id="reviews">
-    <button class="carousel-control-prev position-relative" type="button"
-      data-bs-target="#carouselMultiItemExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next position-relative" type="button"
-      data-bs-target="#carouselMultiItemExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+</div> 
+<div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
+<center className="reveal">
+  <div style={{ maxWidth: "800px", fontFamily: '"Teachers", sans-serif', marginTop: "100px" }}>
+    <h3>Hear What Our Customers Say</h3>
+    <p>Discover the unparalleled experiences shared by our valued clients.
+       Dive into a collection of authentic testimonials, each a testament to 
+       our commitment to excellence. From inspiring success stories to heartfelt 
+       praise, explore the journey of trust and satisfaction our clients embark on with us.</p>
   </div>
-  <div class="carousel-inner py-4">
-    <div class="carousel-item active">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 button-pop-out">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">Anna Deynah</h5>
-            <p>UX Designer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 button-pop-out d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">John Doe</h5>
-            <p>Web Developer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-              suscipit laboriosam, nisi ut aliquid commodi.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li>
-                <i class="fas fa-star-half-alt fa-sm"></i>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 button-pop-out d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">Maria Kate</h5>
-            <p>Photographer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium voluptatum deleniti atque corrupti.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="far fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 button-pop-out">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">John Doe</h5>
-            <p>UX Designer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 button-pop-out d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">Alex Rey</h5>
-            <p>Web Developer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-              suscipit laboriosam, nisi ut aliquid commodi.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li>
-                <i class="fas fa-star-half-alt fa-sm"></i>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 button-pop-out d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">Maria Kate</h5>
-            <p>Photographer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium voluptatum deleniti atque corrupti.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="far fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 button-pop-out">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">Anna Deynah</h5>
-            <p>UX Designer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 button-pop-out d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">John Doe</h5>
-            <p>Web Developer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-              suscipit laboriosam, nisi ut aliquid commodi.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li>
-                <i class="fas fa-star-half-alt fa-sm"></i>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 button-pop-out d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4"
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar"
-              style={{width: "150px"}} />
-            <h5 class="mb-3">Maria Kate</h5>
-            <p>Photographer</p>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium voluptatum deleniti atque corrupti.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="far fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-        </div>
+</center>
+<Slider {...reviewsSettings} className="my-5">
+  {/* First Slide */}
+  <div className="text-center reveal py-5">
+    <div className="d-flex justify-content-center " id="reviews">
+      <div className="container col-lg-8 button-pop-out mx-5">
+        <h5 className="mb-3">Anna Deynah</h5>
+        <p>UX Designer</p>
+        <p className="text-muted">
+          <i className="fas fa-quote-left pe-2"></i>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+          officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+        </p>
+        <ul className="list-unstyled d-flex justify-content-center text-warning mb-0">
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+
+  {/* Second Slide */}
+  <div className="text-center reveal py-5">
+    <div className="d-flex justify-content-center " id="reviews">
+      <div className="container col-lg-8 button-pop-out mx-5">
+        <h5 className="mb-3">John Doe</h5>
+        <p>Web Developer</p>
+        <p className="text-muted">
+          <i className="fas fa-quote-left pe-2"></i>
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+          suscipit laboriosam, nisi ut aliquid commodi.
+        </p>
+        <ul className="list-unstyled d-flex justify-content-center text-warning mb-0">
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li>
+            <i className="fas fa-star-half-alt fa-sm"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {/* Third Slide */}
+  <div className="text-center reveal py-5">
+    <div className="d-flex justify-content-center " id="reviews">
+      <div className="container col-lg-8 button-pop-out mx-5">
+        <h5 className="mb-3">Maria Kate</h5>
+        <p>Photographer</p>
+        <p className="text-muted">
+          <i className="fas fa-quote-left pe-2"></i>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+          praesentium voluptatum deleniti atque corrupti.
+        </p>
+        <ul className="list-unstyled d-flex justify-content-center text-warning mb-0">
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="fas fa-star fa-sm"></i></li>
+          <li><i className="far fa-star fa-sm"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Slider>
 <section id="contact">
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: "hsl(0, 0%, 96%)"}}>
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <h1 class="my-5 display-3 fw-bold ls-tight">
-            The best offer <br />
+            Top Solutions <br />
             <span style={{color: "#16918b"}}>for your business</span>
           </h1>
-          <p style={{color: "hsl(217, 10%, 50.8%)"}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-            quibusdam tempora at cupiditate quis eum maiores libero
-            veritatis? Dicta facilis sint aliquid ipsum atque?
+          <p style={{color: "black"}}>
+          Discover the ultimate solution for your business needs with Valence Interactive LLP.
+           Our tailored services are designed to elevate your enterprise to new heights. 
+           Collaborate with us to unlock unparalleled growth and success.
           </p>
         </div>
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -597,82 +472,61 @@ function Home() {
 </div>
 </div>
 </section>
-<section class="text-center">
-  <div class="p-5 bg-image" style={{
-        backgroundColor: '#16918b',
-        height: "300px",
-        marginBottom: "-150px"}}></div>
-  <div class="row"  id='aboutus'>
-    <div class="col-md-6 reveal">
-      <div class="card mx-4 mx-md-5 shadow-5-strong mt-5" style={{
-          background: "hsla(0, 0%, 100%, 0.8)",
-          backdropFilter: "blur(30px)",
-          maxWidth: '800px',
-          height: '420px'}}>
-        <div class="card-body py-5 px-md-5">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8">
-              <h2 class="fw-bold mb-5">About Us</h2>
-              <h6>At Valence Interactive LLP, we believe in more than just lines of code
-                 we believe in creating meaningful connections between businesses and their 
-                 audiences. With a collaborative approach, we work closely with our clients 
-                 to understand their unique needs, tailoring every project to reflect their brand identity. 
-                 Whether you are a startup looking to make a bold entrance or an established enterprise 
-                 seeking a digital facelift, we're here to bring your web development dreams to life. 
-              </h6>
+<section className="text-center">
+  <div className="bg-image" style={{ backgroundColor: '#16918b', height: '150px', marginBottom: '-150px' }}></div>
+  <div className="row" id="aboutus">
+    <div className="col-md-12 reveal">
+      <div className="mt-5 d-flex flex-row" style={{ backgroundColor: 'hsla(0, 100%, 100%, 0.0)', height: 'auto' }}>
+        <div className="py-5 px-md-5 d-flex w-100">
+          <div className="row w-100 mb-5">
+            <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif' }}>
+              <h1 className="mb-3 text-center text-light">About Us</h1>
+              <div style={{ textAlign: 'left' }}>
+                <div className="mt-2" style={{ fontSize: "16px" }}>At Valence Interactive LLP, we believe in more than just lines of code;
+                   we believe in crafting meaningful connections between businesses and their audiences. Our philosophy
+                    centers around a collaborative approach, where we work closely with our clients to deeply understand
+                     their unique needs and aspirations. Every project we undertake is tailored meticulously to reflect
+                      the distinct brand identity of our clients. This personalized strategy ensures that each solution
+                       we deliver is not only functional but also resonates profoundly with the target audience, fostering
+                        a strong and lasting impression.<br /><br />
+                    Whether you are a dynamic startup aiming to make a bold entrance into the market or an established 
+                    enterprise seeking a comprehensive digital facelift, Valence Interactive LLP is your dedicated partner.
+                     We are committed to transforming your web development visions into reality. Our team of skilled developers 
+                     and designers bring a wealth of experience and creativity to every project, ensuring that your digital 
+                     presence is not just up-to-date but also ahead of the curve. With our support, your business can achieve 
+                     new heights of digital innovation and engagement, creating a lasting impact in your industry.
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center" style={{ marginTop: '0' }}>
+              <div style={{
+                width: 'auto',
+                height: 'auto',
+                overflow: 'hidden',
+                transform: 'skewX(-30deg)',
+              }}>
+                <img
+                  src={AboutUs} alt="about us"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    transform: 'skewX(30deg)',
+                    marginTop: '0',
+                    border: 'none'
+                  }}
+                />
+              </div>
+              {/* <a href="#contact">
+                <button type="button" className="btn btn-rounded btn-lg button-pop-out" style={{ fontFamily: '"Teachers", sans-serif', maxWidth: '200px', backgroundColor: '#16918b', color: 'white' }}>
+                  Message Us
+                </button>
+              </a> */}
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-6 reveal">
-  <div class="card mx-4 mx-md-5 shadow-5-strong mt-5" style={{
-      background: "hsla(0, 0%, 100%, 0.8)",
-      backdropFilter: "blur(30px)",
-      maxWidth: '800px',
-      height: '420px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
-  }}>
-    <div class="d-flex mb-3">
-      <div class="text-center mr-4">
-        <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-          class="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-        <h4 class="mb-2">Robert J. Obernier</h4>
-        <p class="text-muted mx-5">Owner/Partner <span class="mx-2">|</span> Web Developer</p>
-      </div>
-      <div class="text-center">
-        <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-          class="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-        <h4 class="mb-2">John Ifert-Miller</h4>
-        <p class="text-muted mx-5">Owner/Partner <span class="mx-2">|</span> Web Developer</p>
-      </div>
-    </div>
-    <center>
-      <button type="button" class="btn btn-rounded btn-lg button-pop-out" style={{maxWidth: '200px', backgroundColor: '#16918b', color: 'white'}}>
-        Message Us
-      </button>
-    </center>
-    <div class="d-flex justify-content-between text-center mt-3 mx-5">
-      <div>
-        <p class="mb-2 h5">500M</p>
-        <p class="text-muted mb-0">Years Experience</p>
-      </div>
-      <div class="px-3">
-        <p class="mb-2 h5">852B</p>
-        <p class="text-muted mb-0">Income amounts</p>
-      </div>
-      <div>
-        <p class="mb-2 h5">0</p>
-        <p class="text-muted mb-0">Total Transactions</p>
-      </div>
-    </div>
   </div>
-</div>
-</div>
 </section>
 </div>
   );
