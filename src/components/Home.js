@@ -13,6 +13,10 @@ import emailjs from '@emailjs/browser';
 
 function Home() {
 
+  const emailJsService = process.env.REACT_APP_EMAILJS_SERVICE;
+  const emailJsTemplate = process.env.REACT_APP_EMAILJS_TEMPLATE;
+  const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
   const [visible, setVisible] = useState(false);
   const [visible1, setVisible1] = useState(false);
   const [visible2, setVisible2] = useState(false);
@@ -43,7 +47,7 @@ function Home() {
   };
 
   (function () {
-    emailjs.init("SaEkADslta5XEshpP");
+    emailjs.init(emailJsPublicKey);
   })();
 
   function sendMail() {
@@ -56,7 +60,7 @@ function Home() {
         from_phone: phone.current.value,
         message: message.current.value,
       };
-      emailjs.send('service_f96l2vv', 'template_hrsozfb', params).then(function (res) {});
+      emailjs.send(emailJsService, emailJsTemplate, params).then(function (res) {});
       alert("Thank you for sending a message!");
       window.location.reload(false);
     } else {
