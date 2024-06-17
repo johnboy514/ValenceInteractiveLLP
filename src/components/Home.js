@@ -1,5 +1,4 @@
 import {React, useEffect, useRef, useState} from "react";
-import {Button, Form}from 'react-bootstrap';
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/BreeYoga.png";
 import Handyman from "../images/HandymanTemplate.png";
@@ -489,66 +488,38 @@ function Home() {
         <div class="col-lg-6 mb-5 mb-lg-0">
     <div class="card" ref={formRef}>
         <div class="card-body py-5 px-md-5">
-                    <Form onSubmit={handleSubmit} className="px-3">
-                      <Form.Group className="mb-3 pt-3" controlId="formNameFirst">
-                        <Form.Control type="text" ref={nameFirst} placeholder="First name here" />
-                        {visible && <div className="text-danger">Please enter your first name</div>}
-                      </Form.Group>
-
-                      <Form.Group className="mb-3 pt-3" controlId="formNameLast">
-                        <Form.Control type="text" ref={nameLast} placeholder="Last name here" />
-                        {visible1 && <div className="text-danger">Please enter your last name</div>}
-                      </Form.Group>
-
-                      <Form.Group className="mb-3" controlId="formEmail">
-                        <Form.Control type="email" ref={email} placeholder={"Email"} pattern="^\S+@\S+\.(com|net|edu|org|gov)$" title="Please enter a valid email address ending with .com" />
-                        {visible2 && <div className="text-danger">Please enter your email</div>}
-                      </Form.Group>
-
-                      <Form.Group className="mb-3" controlId="formPhone">
-                        <Form.Control type="text" ref={phone} placeholder="Phone number here" />
-                        {visible3 && <div className="text-danger">Please enter your phone</div>}
-                      </Form.Group>
-
-                      <Form.Group className="mb-3" controlId="formMessage">
-                      <Form.Control as="textarea" ref={message} rows={5} placeholder="Enter your message..."/>
-                        {visible4 && <div className="text-danger">Please enter your message</div>}
-                      </Form.Group>
-                      <div style={{ borderBottom: '2px solid #283618' }}></div>
-                      
-                      <div className="d-flex justify-content-center mt-3"> {/* Center the button */}
-                        <Button className="button-pop-out" style={{ backgroundColor: '#16918b', color: "white" }} type="submit">
-                          Submit
-                        </Button>
-                      </div>
-                    </Form>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div data-mdb-input-init class="formOutline">
-                            <input type="text" id="form3Example1" class="form-control" />
+                            <input type="text" ref={nameFirst} id="form3Example1" class="form-control" />
                             <label class="form-label" for="form3Example1">First name</label>
-                        </div>
+                            {visible && <div className="text-danger">Please enter your first name</div>}
+                        </div>                        
                     </div>
                     <div class="col-md-6 mb-4">
                         <div data-mdb-input-init class="formOutline">
-                            <input type="text" id="form3Example2" class="form-control" />
+                            <input type="text" ref={nameLast} id="form3Example2" class="form-control" />
                             <label class="form-label" for="form3Example2">Last name</label>
+                            {visible1 && <div className="text-danger">Please enter your last name</div>}
                         </div>
-                    </div>
+                    </div>                   
                 </div>
                 <div data-mdb-input-init class="formOutline mb-4">
-                    <input type="email" id="form3Example3" class="form-control" />
+                    <input type="email" ref={email} id="form3Example3" class="form-control" />
                     <label class="form-label" for="form3Example3">Email address</label>
-                </div>
+                    {visible2 && <div className="text-danger">Please enter your email</div>}
+                </div>                
                 <div data-mdb-input-init class="formOutline mb-4">
-                    <input type="phone" id="form3Example4" class="form-control" />
+                    <input type="phone" ref={phone} id="form3Example4" class="form-control" />
                     <label class="form-label" for="form3Example4">Phone Number</label>
-                </div>
+                    {visible3 && <div className="text-danger">Please enter your phone</div>}
+                </div>                
                 <div data-mdb-input-init class="formOutline mb-4">
-                    <textarea rows="4" id="form3Example4" class="form-control"></textarea>
+                    <textarea rows="4" ref={message} id="form3Example4" class="form-control"></textarea>
                     <label class="form-label" for="form3Example4">How can we help you?</label>
-                </div>
+                    {visible4 && <div className="text-danger">Please enter your message</div>}
+                </div>               
                 <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
                     Submit
                 </button>
