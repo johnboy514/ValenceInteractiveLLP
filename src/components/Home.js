@@ -1,4 +1,4 @@
-import {React, useEffect, useRef} from "react";
+import {React, useEffect, useRef, useState} from "react";
 import {Button, Form}from 'react-bootstrap';
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/BreeYoga.png";
@@ -14,11 +14,11 @@ import emailjs from '@emailjs/browser';
 
 function Home() {
 
-  const [visible, setVisible] = React.useState(false);
-  const [visible1, setVisible1] = React.useState(false);
-  const [visible2, setVisible2] = React.useState(false);
-  const [visible3, setVisible3] = React.useState(false);
-  const [visible4, setVisible4] = React.useState(false);
+  const [visible, setVisible] = useState(false);
+  const [visible1, setVisible1] = useState(false);
+  const [visible2, setVisible2] = useState(false);
+  const [visible3, setVisible3] = useState(false);
+  const [visible4, setVisible4] = useState(false);
 
   const nameFirst = useRef();
   const nameLast = useRef();
