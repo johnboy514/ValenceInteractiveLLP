@@ -1,4 +1,5 @@
 import {React, useEffect, useRef} from "react";
+import {Button, Form}from 'react-bootstrap';
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/BreeYoga.png";
 import Handyman from "../images/HandymanTemplate.png";
@@ -9,8 +10,61 @@ import reviewsBG from "../images/reviewsbg.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import emailjs from '@emailjs/browser';
 
 function Home() {
+
+  const [visible, setVisible] = React.useState(false);
+  const [visible1, setVisible1] = React.useState(false);
+  const [visible2, setVisible2] = React.useState(false);
+  const [visible3, setVisible3] = React.useState(false);
+  const [visible4, setVisible4] = React.useState(false);
+
+  const nameFirst = useRef();
+  const nameLast = useRef();
+  const email = useRef();
+  const phone = useRef();
+  const message = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+      if (nameFirst.current.value === '') {
+      setVisible(true);
+    } if (nameLast.current.value === '') {
+      setVisible1(true);
+    } if (email.current.value === '') {
+      setVisible2(true);
+    } if (phone.current.value === '') {
+      setVisible3(true);
+    } if (message.current.value === '') {
+      setVisible4(true);
+    } else {
+      sendMail();
+    }
+  };
+
+  (function () {
+    emailjs.init("SaEkADslta5XEshpP");
+  })();
+
+  function sendMail() {
+    if (nameFirst.current.value && nameLast.current.value && email.current.value && email.current.value) {
+      var params = {
+        from_nameFirst: nameFirst.current.value,
+        from_nameLast: nameLast.current.value,
+        from_email: email.current.value,
+        reply_to: email.current.value,
+        message: message.current.value,
+      };
+      emailjs.send('service_f96l2vv', 'template_hrsozfb', params).then(function (res) {});
+      alert("Thank you for sending a message!");
+      window.location.reload(false);
+    } else {
+      alert('Failed to send message');
+    }
+  };
+
+
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -434,6 +488,39 @@ function Home() {
         <div class="col-lg-6 mb-5 mb-lg-0">
     <div class="card" ref={formRef}>
         <div class="card-body py-5 px-md-5">
+                    <Form onSubmit={handleSubmit} className="px-3">
+                      <Form.Group className="mb-3 pt-3" controlId="formNameFirst">
+                        <Form.Control type="text" ref={nameFirst} placeholder="First name here" />
+                        {visible && <div className="text-danger">Please enter your first name</div>}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3 pt-3" controlId="formNameLast">
+                        <Form.Control type="text" ref={nameLast} placeholder="Last name here" />
+                        {visible1 && <div className="text-danger">Please enter your last name</div>}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3" controlId="formEmail">
+                        <Form.Control type="email" ref={email} placeholder={"Email"} pattern="^\S+@\S+\.(com|net|edu|org|gov)$" title="Please enter a valid email address ending with .com" />
+                        {visible2 && <div className="text-danger">Please enter your email</div>}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3" controlId="formPhone">
+                        <Form.Control type="text" ref={phone} placeholder="Phone number here" />
+                        {visible3 && <div className="text-danger">Please enter your phone</div>}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3" controlId="formMessage">
+                      <Form.Control as="textarea" ref={message} rows={5} placeholder="Enter your message..."/>
+                        {visible4 && <div className="text-danger">Please enter your message</div>}
+                      </Form.Group>
+                      <div style={{ borderBottom: '2px solid #283618' }}></div>
+                      
+                      <div className="d-flex justify-content-center mt-3"> {/* Center the button */}
+                        <Button className="button-pop-out" style={{ backgroundColor: '#16918b', color: "white" }} type="submit">
+                          Submit
+                        </Button>
+                      </div>
+                    </Form>
             <form>
                 <div class="row">
                     <div class="col-md-6 mb-4">
