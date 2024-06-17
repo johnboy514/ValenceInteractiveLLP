@@ -1,4 +1,4 @@
-import {React, useEffect, useRef} from "react";
+import {React, useEffect, useRef, useState} from "react";
 import Landscaping from "../images/WildBergamot.png";
 import Yoga from "../images/BreeYoga.png";
 import Handyman from "../images/HandymanTemplate.png";
@@ -9,8 +9,62 @@ import reviewsBG from "../images/reviewsbg.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import emailjs from '@emailjs/browser';
 
 function Home() {
+
+  const [visible, setVisible] = useState(false);
+  const [visible1, setVisible1] = useState(false);
+  const [visible2, setVisible2] = useState(false);
+  const [visible3, setVisible3] = useState(false);
+  const [visible4, setVisible4] = useState(false);
+
+  const nameFirst = useRef();
+  const nameLast = useRef();
+  const email = useRef();
+  const phone = useRef();
+  const message = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+      if (nameFirst.current.value === '') {
+      setVisible(true);
+    } if (nameLast.current.value === '') {
+      setVisible1(true);
+    } if (email.current.value === '') {
+      setVisible2(true);
+    } if (phone.current.value === '') {
+      setVisible3(true);
+    } if (message.current.value === '') {
+      setVisible4(true);
+    } else {
+      sendMail();
+    }
+  };
+
+  (function () {
+    emailjs.init("SaEkADslta5XEshpP");
+  })();
+
+  function sendMail() {
+    if (nameFirst.current.value && nameLast.current.value && email.current.value) {
+      var params = {
+        from_nameFirst: nameFirst.current.value,
+        from_nameLast: nameLast.current.value,
+        from_email: email.current.value,
+        reply_to: email.current.value,
+        from_phone: phone.current.value,
+        message: message.current.value,
+      };
+      emailjs.send('service_f96l2vv', 'template_hrsozfb', params).then(function (res) {});
+      alert("Thank you for sending a message!");
+      window.location.reload(false);
+    } else {
+      alert('Failed to send message');
+    }
+  };
+
+
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -434,33 +488,38 @@ function Home() {
         <div class="col-lg-6 mb-5 mb-lg-0">
     <div class="card" ref={formRef}>
         <div class="card-body py-5 px-md-5">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div class="row">
                     <div class="col-md-6 mb-4">
                         <div data-mdb-input-init class="formOutline">
-                            <input type="text" id="form3Example1" class="form-control" />
+                            <input type="text" ref={nameFirst} id="form3Example1" class="form-control" />
                             <label class="form-label" for="form3Example1">First name</label>
-                        </div>
+                            {visible && <div className="text-danger">Please enter your first name</div>}
+                        </div>                        
                     </div>
                     <div class="col-md-6 mb-4">
                         <div data-mdb-input-init class="formOutline">
-                            <input type="text" id="form3Example2" class="form-control" />
+                            <input type="text" ref={nameLast} id="form3Example2" class="form-control" />
                             <label class="form-label" for="form3Example2">Last name</label>
+                            {visible1 && <div className="text-danger">Please enter your last name</div>}
                         </div>
-                    </div>
+                    </div>                   
                 </div>
                 <div data-mdb-input-init class="formOutline mb-4">
-                    <input type="email" id="form3Example3" class="form-control" />
+                    <input type="email" ref={email} id="form3Example3" class="form-control" />
                     <label class="form-label" for="form3Example3">Email address</label>
-                </div>
+                    {visible2 && <div className="text-danger">Please enter your email</div>}
+                </div>                
                 <div data-mdb-input-init class="formOutline mb-4">
-                    <input type="phone" id="form3Example4" class="form-control" />
+                    <input type="phone" ref={phone} id="form3Example4" class="form-control" />
                     <label class="form-label" for="form3Example4">Phone Number</label>
-                </div>
+                    {visible3 && <div className="text-danger">Please enter your phone</div>}
+                </div>                
                 <div data-mdb-input-init class="formOutline mb-4">
-                    <textarea rows="4" id="form3Example4" class="form-control"></textarea>
+                    <textarea rows="4" ref={message} id="form3Example4" class="form-control"></textarea>
                     <label class="form-label" for="form3Example4">How can we help you?</label>
-                </div>
+                    {visible4 && <div className="text-danger">Please enter your message</div>}
+                </div>               
                 <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
                     Submit
                 </button>
