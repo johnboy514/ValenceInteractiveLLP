@@ -48,12 +48,13 @@ function Home() {
   })();
 
   function sendMail() {
-    if (nameFirst.current.value && nameLast.current.value && email.current.value && email.current.value) {
+    if (nameFirst.current.value && nameLast.current.value && email.current.value) {
       var params = {
         from_nameFirst: nameFirst.current.value,
         from_nameLast: nameLast.current.value,
         from_email: email.current.value,
         reply_to: email.current.value,
+        from_phone: phone.current.value,
         message: message.current.value,
       };
       emailjs.send('service_f96l2vv', 'template_hrsozfb', params).then(function (res) {});
