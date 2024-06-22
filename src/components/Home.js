@@ -13,6 +13,17 @@ import emailjs from '@emailjs/browser';
 
 function Home() {
 
+  const [showAlert, setShowAlert] = useState(false);
+
+  const alertTest = () => {
+    setShowAlert(true);
+    // Optionally hide the alert after a certain time
+    setTimeout(() => {
+      setShowAlert(false);
+      window.location.reload(false);
+    }, 3000); // hide after 3 seconds
+  };
+
   const emailJsService = process.env.REACT_APP_EMAILJS_SERVICE;
   const emailJsTemplate = process.env.REACT_APP_EMAILJS_TEMPLATE;
   const emailJsPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
@@ -58,11 +69,10 @@ function Home() {
         from_email: email.current.value,
         reply_to: email.current.value,
         from_phone: phone.current.value,
-        message: message.current.value,
+        from_message: message.current.value,
       };
       emailjs.send(emailJsService, emailJsTemplate, params).then(function (res) {});
-      alert("Thank you for sending a message!");
-      window.location.reload(false);
+      alertTest();
     } else {
       alert('Failed to send message');
     }
@@ -222,11 +232,13 @@ function Home() {
           <center>
           <div style={{maxWidth: "800px", fontFamily: '"Teachers", sans-serif'}}>
         <h3>Our Work</h3>
-        <p>Explore a selection of websites we've built, 
-          each demonstrating our skills in design, functionality, 
-          and user experience. From sleek and modern interfaces 
-          to robust and dynamic applications, these projects 
-          highlight our commitment to quality and innovation.</p>
+            <p>
+              Explore a selection of websites we've built,
+              this can be helpful when designing your site to get ideas.
+              From sleek and modern interfaces 
+              to robust and dynamic applications, these projects 
+              highlight our commitment to quality and innovation.
+            </p>
           </div>
           </center>
       <Slider {...projectsCarouselSettings} className="reveal">
@@ -271,7 +283,7 @@ function Home() {
     </center> 
     <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
 </section>
-<div class="row">
+{/* <div class="row">
   <div class="col-md-3 reveal">
     <div class="card">
       <div class="mx-2 card-body" style={{fontFamily: '"Teachers", sans-serif'}}>
@@ -394,8 +406,9 @@ function Home() {
       </div>
     </div>
   </div>
-</div> 
-<div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
+</div>  */}
+{/* --------------------------------Review Section------------------------------------ */}
+{/* <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
 <center className="reveal">
   <div style={{ maxWidth: "800px", fontFamily: '"Teachers", sans-serif', marginTop: "100px" }}>
     <h3>Hear What Our Customers Say</h3>
@@ -406,7 +419,6 @@ function Home() {
   </div>
 </center>
 <Slider {...reviewsSettings} className="my-5">
-  {/* First Slide */}
   <div className="text-center reveal py-5">
     <div className="d-flex justify-content-center " id="reviews">
       <div className="container col-lg-8 button-pop-out mx-5">
@@ -428,7 +440,6 @@ function Home() {
     </div>
   </div>
 
-  {/* Second Slide */}
   <div className="text-center reveal py-5">
     <div className="d-flex justify-content-center " id="reviews">
       <div className="container col-lg-8 button-pop-out mx-5">
@@ -452,7 +463,6 @@ function Home() {
     </div>
   </div>
 
-  {/* Third Slide */}
   <div className="text-center reveal py-5">
     <div className="d-flex justify-content-center " id="reviews">
       <div className="container col-lg-8 button-pop-out mx-5">
@@ -473,7 +483,7 @@ function Home() {
       </div>
     </div>
   </div>
-</Slider>
+</Slider> */}
 <section id="contact">
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>
     <div class="container">
@@ -484,9 +494,9 @@ function Home() {
             <span style={{color: "#16918b"}}>for your business</span>
           </h1>
           <p style={{color: "black"}}>
+          Let us help you design and make your site to match your buisnesses needs.
           Discover the ultimate solution for your business needs with Valence Interactive LLP.
-           Our tailored services are designed to elevate your enterprise to new heights. 
-           Collaborate with us to unlock unparalleled growth and success.
+          Collaborate with us today to create your ideal digital footprint.
           </p>
         </div>
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -528,6 +538,13 @@ function Home() {
                     Submit
                 </button>
             </form>
+            <center>
+            {showAlert && (
+      <span className="alert alert-success fade-in" role="alert">
+        Thanks for contacting us we will be back to you shortly!
+      </span>
+        )}
+        </center>
         </div>
     </div>
 </div>

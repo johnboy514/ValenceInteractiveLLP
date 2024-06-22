@@ -84,7 +84,7 @@ function NavbarComponent() {
           >
             <i className="fas fa-bars"></i>
           </button>
-          <div className="collapse navbar-collapse" id="navbarButtonsExample">
+          <div className="collapse navbar-collapse custom-navbar-collapse" id="navbarButtonsExample">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <button
@@ -140,16 +140,9 @@ function NavbarComponent() {
               >
                 Contact
               </button>
-              {/* <button
-                type="button"
-                className="btn me-3 button-pop-out"
-                style={{ backgroundColor: '#16918b', color: 'white' }}
-              >
-                Message Us
-              </button> */}
               <button
                 className="btn btn-dark px-3 button-pop-out"
-                style={{backgroundColor: "#16918b"}}
+                style={{ backgroundColor: "#16918b" }}
                 onClick={openModal}
               >
                 <i className="fab fa-github"></i>
@@ -164,31 +157,31 @@ function NavbarComponent() {
             <div className="modal-header" style={{ backgroundColor: '#16918b', color: 'white' }}>
               <h5 className="modal-title">GitHub Links</h5>
               <button
-              type="button"
-              className="btn-close-white"
-              aria-label="Close"
-              onClick={closeModal}
-            ></button>
+                type="button"
+                className="btn-close-white"
+                aria-label="Close"
+                onClick={closeModal}
+              ></button>
             </div>
             <div className="modal-body">
-            <div className="d-flex mb-3">
-            <a href="https://github.com/rjo6615" style={{textDecoration: 'none'}} className="button-pop-out text-dark">
-              <div className="text-center mr-4">
-                <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-                  className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-                <h4 className="mb-2">Robert J. Obernier</h4>
-                <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
+              <div className="d-flex mb-3">
+                <a href="https://github.com/rjo6615" style={{ textDecoration: 'none' }} className="button-pop-out text-dark">
+                  <div className="text-center mr-4">
+                    <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
+                      className="rounded-circle img-fluid" alt="" style={{ width: "100px" }} />
+                    <h4 className="mb-2">Robert J. Obernier</h4>
+                    <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
+                  </div>
+                </a>
+                <a href="https://github.com/johnboy514" style={{ textDecoration: 'none' }} className="button-pop-out text-dark">
+                  <div className="text-center">
+                    <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
+                      className="rounded-circle img-fluid" alt="" style={{ width: "100px" }} />
+                    <h4 className="mb-2">John Ifert-Miller</h4>
+                    <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
+                  </div>
+                </a>
               </div>
-              </a>
-              <a href="https://github.com/johnboy514" style={{textDecoration: 'none'}} className="button-pop-out text-dark">
-              <div className="text-center">
-                <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-                  className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-                <h4 className="mb-2">John Ifert-Miller</h4>
-                <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
-              </div>
-              </a>
-            </div>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" onClick={closeModal}>Close</button>
