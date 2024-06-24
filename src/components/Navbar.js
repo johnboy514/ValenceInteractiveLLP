@@ -103,7 +103,7 @@ function NavbarComponent() {
                 >
                   Projects
                 </button>
-              </li>
+              {/* </li>
               <li className="nav-item">
                 <button
                   className="nav-link button-pop-out"
@@ -120,7 +120,7 @@ function NavbarComponent() {
                   onClick={() => customScroll('reviews')}
                 >
                   Reviews
-                </button>
+                </button> */}
               </li>
             </ul>
             <div className="d-flex align-items-center">

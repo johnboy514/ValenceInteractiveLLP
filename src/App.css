@@ -176,6 +176,6 @@ body {
 }
 
 .custom-navbar-collapse {
-  background-color: white; /* Set background color for dropdown links */
+  /* background-color: white; Set background color for dropdown links */
   padding: 10px; /* Adjust padding as needed */
 }
