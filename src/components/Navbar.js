@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import devLogo from '../images/Logo.png';
 
 function NavbarComponent() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
 
   const navbarHeight = 250; // Adjust this value based on your actual navbar height
@@ -12,8 +11,8 @@ function NavbarComponent() {
     position: 'fixed',
     width: '100%',
     zIndex: '10',
-    height: `100px`,
-    transition: 'background-color 0.3s ease'
+    height: '100px',
+    transition: 'background-color 0.3s ease',
   };
 
   const linkStyle = {
@@ -22,7 +21,13 @@ function NavbarComponent() {
     color: 'black',
     padding: '5px 10px',
     textDecoration: 'none',
-    fontFamily: '"Teachers", sans-serif'
+    fontFamily: '"Teachers", sans-serif',
+    opacity: '0',
+    animation: 'fadeIn 0.5s forwards',
+  };
+
+  const toggleButtonStyle = {
+    color: 'black', // Change this to make the toggle button icon more visible
   };
 
   const customScroll = (elementId) => {
@@ -32,17 +37,17 @@ function NavbarComponent() {
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - offset,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
-  };
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+    // Close the navbar on mobile after a link is clicked
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarToggler && navbarCollapse) {
+      navbarToggler.classList.add('collapsed');
+      navbarCollapse.classList.remove('show');
+    }
   };
 
   useEffect(() => {
@@ -70,7 +75,7 @@ function NavbarComponent() {
             height="108"
             alt="Logo"
             loading="lazy"
-            style={{ marginTop: "-1px" }}
+            style={{ marginTop: '-1px' }}
             className="me-5"
           />
           <button
@@ -81,6 +86,7 @@ function NavbarComponent() {
             aria-controls="navbarButtonsExample"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style={toggleButtonStyle}
           >
             <i className="fas fa-bars"></i>
           </button>
@@ -99,104 +105,66 @@ function NavbarComponent() {
                 <button
                   className="nav-link button-pop-out"
                   style={linkStyle}
-                  onClick={() => customScroll('projects')}
+                  onClick={() => customScroll('aboutus')}
                 >
-                  Projects
-                </button>
-              </li>
-              <li className="nav-item">
-                <button
-                  className="nav-link button-pop-out"
-                  style={linkStyle}
-                  onClick={() => customScroll('pricing')}
-                >
-                  Pricing
-                </button>
-              </li>
-              <li className="nav-item">
-                <button
-                  className="nav-link button-pop-out"
-                  style={linkStyle}
-                  onClick={() => customScroll('reviews')}
-                >
-                  Reviews
+                  About
                 </button>
               </li>
             </ul>
-            <div className="d-flex align-items-center">
+            <div className="ms-lg-auto d-flex align-items-center justify-content-end">
               <button
-                type="button"
-                className="btn btn-link px-3 me-2 text-capitalize button-pop-out"
-                style={linkStyle}
-                onClick={() => customScroll('aboutus')}
-              >
-                About
-              </button>
-              <button
-                type="button"
-                className="btn btn-link px-3 me-2 text-capitalize button-pop-out"
-                style={linkStyle}
+                className="btn btn-dark px-3 button-pop-out text-light"
+                style={{ backgroundColor: '#16918b', ...linkStyle }}
                 onClick={() => customScroll('contact')}
               >
                 Contact
-              </button>
-              {/* <button
-                type="button"
-                className="btn me-3 button-pop-out"
-                style={{ backgroundColor: '#16918b', color: 'white' }}
-              >
-                Message Us
-              </button> */}
-              <button
-                className="btn btn-dark px-3 button-pop-out"
-                style={{backgroundColor: "#16918b"}}
-                onClick={openModal}
-              >
-                <i className="fab fa-github"></i>
               </button>
             </div>
           </div>
         </div>
       </nav>
-      <div className={`modal fade ${isModalOpen ? 'show' : ''}`} tabIndex="-1" aria-hidden="true" style={{ display: isModalOpen ? 'block' : 'none' }}>
-        <div className="modal-dialog">
-          <div className="modal-content" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}>
-            <div className="modal-header" style={{ backgroundColor: '#16918b', color: 'white' }}>
-              <h5 className="modal-title">GitHub Links</h5>
-              <button
-              type="button"
-              className="btn-close-white"
-              aria-label="Close"
-              onClick={closeModal}
-            ></button>
-            </div>
-            <div className="modal-body">
-            <div className="d-flex mb-3">
-            <a href="https://github.com/rjo6615" style={{textDecoration: 'none'}} className="button-pop-out text-dark">
-              <div className="text-center mr-4">
-                <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-                  className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-                <h4 className="mb-2">Robert J. Obernier</h4>
-                <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
-              </div>
-              </a>
-              <a href="https://github.com/johnboy514" style={{textDecoration: 'none'}} className="button-pop-out text-dark">
-              <div className="text-center">
-                <img src="https://cdn0.iconfinder.com/data/icons/avatars-6/500/Avatar_boy_man_people_account_boss_client_beard_male_person_user-512.png"
-                  className="rounded-circle img-fluid" alt="" style={{width: "100px"}} />
-                <h4 className="mb-2">John Ifert-Miller</h4>
-                <p className="text-muted mx-5">Owner/Partner <span className="mx-2"></span> Programmer</p>
-              </div>
-              </a>
-            </div>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" onClick={closeModal}>Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* End GitHub Modal */}
+      <style jsx>{`
+        @media (max-width: 992px) {
+          .collapse.navbar-collapse {
+            background-color: transparent;
+          }
+          .nav-link, .btn {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            margin-bottom: 0.5rem; /* Space between links */
+            text-align: right; /* Align text to the right */
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+          }
+          .navbar-nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align links to the right */
+          }
+          .ms-lg-auto {
+            margin-left: auto; /* Ensure Contact button is aligned to the right */
+          }
+        }
+        @media (min-width: 992px) {
+          .collapse.navbar-collapse {
+            background-color: transparent !important;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+          }
+          .nav-link {
+            background-color: transparent; /* Fully transparent background for desktop view */
+            opacity: 1; /* Ensure opacity is set to 1 for desktop view */
+          }
+          .navbar-nav {
+            flex-direction: row; /* Align links in a row */
+            align-items: center; /* Align links vertically */
+          }
+          .ms-auto {
+            margin-left: auto; /* Push Contact button to the right */
+          }
+        }
+      `}</style>
     </div>
   );
 }
