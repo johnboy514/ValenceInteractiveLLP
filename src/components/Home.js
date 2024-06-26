@@ -1,11 +1,11 @@
 import {React, useEffect, useRef, useState} from "react";
-import Landscaping from "../images/WildBergamot.png";
-import Yoga from "../images/BreeYoga.png";
-import Handyman from "../images/HandymanTemplate.png";
-import DogWalker from "../images/LudlowDogWalker.png";
+// import Landscaping from "../images/WildBergamot.png";
+// import Yoga from "../images/BreeYoga.png";
+// import Handyman from "../images/HandymanTemplate.png";
+// import DogWalker from "../images/LudlowDogWalker.png";
 import Hero from "../images/hero.jpg";
 import AboutUs from "../images/aboutUs.jpg";
-import reviewsBG from "../images/reviewsbg.jpg";
+// import reviewsBG from "../images/reviewsbg.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -123,25 +123,25 @@ function Home() {
           }
       };
   }, []);
-  const projectsCarouselSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true, // Enable auto scroll
-    autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // const projectsCarouselSettings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   autoplay: true, // Enable auto scroll
+  //   autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   const headerSettings = {
     dots: false,
@@ -163,25 +163,25 @@ function Home() {
     ],
   };
 
-  const reviewsSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true, // Enable auto scroll
-    autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // const reviewsSettings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   autoplay: true, // Enable auto scroll
+  //   autoplaySpeed: 3000, // Set auto scroll speed to 3 seconds
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
   return (
     <div>
 <section class="text-center" id="home">
@@ -226,7 +226,7 @@ function Home() {
     </div>
   </div>
 </section>
-<center>
+{/* <center>
     
         <div className="text-center reveal" id="projects" style={{marginTop: "400px"}}>
           <center>
@@ -280,8 +280,8 @@ function Home() {
         </a>
       </Slider>
     </div>
-    </center> 
-    <section class="text-center reveal" id="pricing" style={{marginTop: '100px'}}>
+    </center>  */}
+    <section class="text-center reveal" id="pricing" style={{marginTop: '300px'}}>
 </section>
 {/* <div class="row">
   <div class="col-md-3 reveal">
@@ -484,7 +484,7 @@ function Home() {
     </div>
   </div>
 </Slider> */}
-<section id="contact">
+<section>
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
@@ -499,7 +499,7 @@ function Home() {
           Collaborate with us today to create your ideal digital footprint.
           </p>
         </div>
-        <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="col-lg-6 mb-5 mb-lg-0"  id="contact">
     <div class="card" ref={formRef}>
         <div class="card-body py-5 px-md-5">
             <form onSubmit={handleSubmit}>
@@ -533,10 +533,12 @@ function Home() {
                     <textarea rows="4" ref={message} id="form3Example4" class="form-control"></textarea>
                     <label class="form-label" for="form3Example4">How can we help you?</label>
                     {visible4 && <div className="text-danger">Please enter your message</div>}
-                </div>               
+                </div>     
+               
                 <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
-                    Submit
+                   <center> Submit </center>
                 </button>
+              
             </form>
             <center>
             {showAlert && (
@@ -562,19 +564,16 @@ function Home() {
             <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif' }}>
               <h1 className="mb-3 text-center text-light">About Us</h1>
               <div style={{ textAlign: 'left' }}>
-                <div className="mt-2" style={{ fontSize: "16px" }}>At Valence Interactive LLP, we believe in more than just lines of code;
-                   we believe in crafting meaningful connections between businesses and their audiences. Our philosophy
-                    centers around a collaborative approach, where we work closely with our clients to deeply understand
-                     their unique needs and aspirations. Every project we undertake is tailored meticulously to reflect
-                      the distinct brand identity of our clients. This personalized strategy ensures that each solution
-                       we deliver is not only functional but also resonates profoundly with the target audience, fostering
-                        a strong and lasting impression.<br /><br />
+                <div className="mt-2 mx-2" style={{ fontSize: "16px" }}>
+                    At Valence Interactive LLP, we believe in more than just lines of code;
+                    we believe in crafting strong connections between businesses and their audiences. Our philosophy
+                    centers around a collaborative approach, where we work closely with our clients to understand
+                    their unique needs and aspirations as a company. Every project we undertake is tailored meticulously to reflect
+                    the distinct brand identity of our clients.<br /><br />
                     Whether you are a dynamic startup aiming to make a bold entrance into the market or an established 
                     enterprise seeking a comprehensive digital facelift, Valence Interactive LLP is your dedicated partner.
-                     We are committed to transforming your web development visions into reality. Our team of skilled developers 
-                     and designers bring a wealth of experience and creativity to every project, ensuring that your digital 
-                     presence is not just up-to-date but also ahead of the curve. With our support, your business can achieve 
-                     new heights of digital innovation and engagement, creating a lasting impact in your industry.
+                    We are committed to transforming your web development visions into reality. Allow us to help make sure your digital 
+                    presence is up-to-date and what you're really looking for.
                 </div>
               </div>
             </div>
