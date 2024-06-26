@@ -1,16 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.8a977dd0.css",
-    "main.js": "/static/js/main.0501ce99.js",
+    "main.css": "/static/css/main.c2b55898.css",
+    "main.js": "/static/js/main.b39e4b29.js",
     "static/js/787.73f6c260.chunk.js": "/static/js/787.73f6c260.chunk.js",
-    "static/media/WildBergamot.png": "/static/media/WildBergamot.26bbda5e64efa6e44133.png",
-    "static/media/BreeYoga.png": "/static/media/BreeYoga.92d01a66c6a70882d2c6.png",
-    "static/media/LudlowDogWalker.png": "/static/media/LudlowDogWalker.14a742425d1d63f04241.png",
-    "static/media/HandymanTemplate.png": "/static/media/HandymanTemplate.f91ce8fec883fb856055.png",
     "static/media/hero.jpg": "/static/media/hero.dfefdcc22b32ff364a6c.jpg",
     "static/media/aboutUs.jpg": "/static/media/aboutUs.f9d23ed5ce49c79bb8a2.jpg",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
-    "static/media/reviewsbg.jpg": "/static/media/reviewsbg.8c99d0438aa3e1dfda81.jpg",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
@@ -23,12 +18,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.8a977dd0.css.map": "/static/css/main.8a977dd0.css.map",
-    "main.0501ce99.js.map": "/static/js/main.0501ce99.js.map",
+    "main.c2b55898.css.map": "/static/css/main.c2b55898.css.map",
+    "main.b39e4b29.js.map": "/static/js/main.b39e4b29.js.map",
     "787.73f6c260.chunk.js.map": "/static/js/787.73f6c260.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a977dd0.css",
-    "static/js/main.0501ce99.js"
+    "static/css/main.c2b55898.css",
+    "static/js/main.b39e4b29.js"
   ]
 }
