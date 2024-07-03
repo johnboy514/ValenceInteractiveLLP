@@ -26,10 +26,7 @@ function Footer() {
             <h6 className="text-uppercase fw-bold mb-4 text-center">Contact</h6>
             <div className="text-start">
               <p><i className="fas fa-home me-3 text-secondary"></i>United States</p>
-              <p>
-                <i className="fas fa-envelope me-3 text-secondary"></i>
-                valenceinteractivellp@gmail.com
-              </p>
+              <p><i className="fas fa-envelope me-3 text-secondary"></i>valenceinteractivellp@gmail.com</p>
               {/* <p><i className="fas fa-phone me-3 text-secondary"></i> + 01 555 555 5555</p> */}
             </div>
           </div>
