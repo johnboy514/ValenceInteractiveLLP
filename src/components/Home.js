@@ -494,9 +494,9 @@ function Home() {
             <span style={{color: "#16918b"}}>for your business</span>
           </h1>
           <p style={{color: "black"}}>
-          Let us help you design and make your site to match your buisnesses needs.
-          Discover the ultimate solution for your business needs with Valence Interactive LLP.
-          Collaborate with us today to create your ideal digital footprint.
+          Site Design that matches your business's specific needs
+          At Valence Interactive LLP, we work closely with customers every step of the way.
+          Collaborate with us today to create your ideal digital footprint!
           </p>
         </div>
         <div class="col-lg-6 mb-5 mb-lg-0"  id="contact">
