@@ -5,7 +5,8 @@ import {React, useEffect, useRef, useState} from "react";
 // import DogWalker from "../images/LudlowDogWalker.png";
 import Hero from "../images/hero.jpg";
 import AboutUs from "../images/aboutUs.jpg";
-// import reviewsBG from "../images/reviewsbg.jpg";
+import OurProcess from "../images/OurProcess.svg"
+import reviewsBG from "../images/reviewsbg.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -226,6 +227,28 @@ function Home() {
     </div>
   </div>
 </section>
+
+<section>
+<div
+  className="row"
+  id="process"
+  style={{
+    maxWidth: "800px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "auto",
+    margin: "300px auto 0px"
+  }}
+>
+  <div className="our-process-container">
+    <img src={OurProcess} alt="Our Process" className="our-process-image" />
+    <div className="blur-overlay"></div>
+  </div>
+</div>
+
+
+</section>
 {/* <center>
     
         <div className="text-center reveal" id="projects" style={{marginTop: "400px"}}>
@@ -281,7 +304,7 @@ function Home() {
       </Slider>
     </div>
     </center>  */}
-    <section class="text-center reveal" id="pricing" style={{marginTop: '300px'}}>
+    <section class="text-center reveal" id="pricing">
 </section>
 {/* <div class="row">
   <div class="col-md-3 reveal">
@@ -408,8 +431,8 @@ function Home() {
   </div>
 </div>  */}
 {/* --------------------------------Review Section------------------------------------ */}
-{/* <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
-<center className="reveal">
+ <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
+{/* <center className="reveal">
   <div style={{ maxWidth: "800px", fontFamily: '"Teachers", sans-serif', marginTop: "100px" }}>
     <h3>Hear What Our Customers Say</h3>
     <p>Discover the unparalleled experiences shared by our valued clients.
@@ -481,8 +504,8 @@ function Home() {
           <li><i className="far fa-star fa-sm"></i></li>
         </ul>
       </div>
-    </div>
-  </div>
+    </div> 
+  </div> 
 </Slider> */}
 <section>
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>

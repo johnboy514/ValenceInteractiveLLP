@@ -179,3 +179,26 @@ body {
   /* background-color: white; Set background color for dropdown links */
   padding: 10px; /* Adjust padding as needed */
 }
+
+/* src/components/OurProcessSection.css */
+.our-process-container {
+  position: relative;
+  display: inline-block;
+}
+
+.our-process-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(20px); /* Adjust the blur intensity as needed */
+ /* Adjust based on the blur intensity to ensure it covers the edges */
+}
