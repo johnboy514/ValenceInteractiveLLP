@@ -516,66 +516,66 @@ function Home() {
             Top Solutions <br />
             <span style={{color: "#16918b"}}>for your business</span>
           </h1>
-          <p style={{color: "black"}}>
+          <p style={{color: "black", fontSize: "20px"}}>
           Site Design that matches your business's specific needs
           At Valence Interactive LLP, we work closely with customers every step of the way.
           Collaborate with us today to create your ideal digital footprint!
           </p>
         </div>
         <div class="col-lg-6 mb-5 mb-lg-0"  id="contact">
-    <div class="card" ref={formRef}>
-        <div class="card-body py-5 px-md-5">
-            <form onSubmit={handleSubmit}>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div data-mdb-input-init class="formOutline">
-                            <input type="text" ref={nameFirst} id="form3Example1" class="form-control" />
-                            <label class="form-label" for="form3Example1">First name</label>
-                            {visible && <div className="text-danger">Please enter your first name</div>}
-                        </div>                        
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div data-mdb-input-init class="formOutline">
-                            <input type="text" ref={nameLast} id="form3Example2" class="form-control" />
-                            <label class="form-label" for="form3Example2">Last name</label>
-                            {visible1 && <div className="text-danger">Please enter your last name</div>}
+            <div class="card" ref={formRef}>
+                <div class="card-body py-5 px-md-5">
+                    <form onSubmit={handleSubmit}>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="formOutline">
+                                    <input type="text" ref={nameFirst} id="form3Example1" class="form-control" />
+                                    <label class="form-label" for="form3Example1" style={{ fontSize: '14px' }}>First name</label>
+                                    {visible && <div className="text-danger">Please enter your first name</div>}
+                                </div>                        
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div data-mdb-input-init class="formOutline">
+                                    <input type="text" ref={nameLast} id="form3Example2" class="form-control" />
+                                    <label class="form-label" for="form3Example2" style={{ fontSize: '14px' }}>Last name</label>
+                                    {visible1 && <div className="text-danger">Please enter your last name</div>}
+                                </div>
+                            </div>                   
                         </div>
-                    </div>                   
+                        <div data-mdb-input-init class="formOutline mb-4">
+                            <input type="email" ref={email} id="form3Example3" class="form-control" />
+                            <label class="form-label" for="form3Example3" style={{ fontSize: '14px' }}>Email address</label>
+                            {visible2 && <div className="text-danger">Please enter your email</div>}
+                        </div>                
+                        <div data-mdb-input-init class="formOutline mb-4">
+                            <input type="phone" ref={phone} id="form3Example4" class="form-control" />
+                            <label class="form-label" for="form3Example4" style={{ fontSize: '14px' }}>Phone Number</label>
+                            {visible3 && <div className="text-danger">Please enter your phone</div>}
+                        </div>                
+                        <div data-mdb-input-init class="formOutline mb-4">
+                            <textarea rows="4" ref={message} id="form3Example4" class="form-control"></textarea>
+                            <label class="form-label" for="form3Example4" style={{ fontSize: '14px' }}>How can we help you?</label>
+                            {visible4 && <div className="text-danger">Please enter your message</div>}
+                        </div>     
+                      
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
+                          <center> Submit </center>
+                        </button>
+                      
+                    </form>
+                    <center>
+                    {showAlert && (
+              <span className="alert alert-success fade-in" role="alert">
+                Thanks for contacting us we will be back to you shortly!
+              </span>
+                )}
+                </center>
                 </div>
-                <div data-mdb-input-init class="formOutline mb-4">
-                    <input type="email" ref={email} id="form3Example3" class="form-control" />
-                    <label class="form-label" for="form3Example3">Email address</label>
-                    {visible2 && <div className="text-danger">Please enter your email</div>}
-                </div>                
-                <div data-mdb-input-init class="formOutline mb-4">
-                    <input type="phone" ref={phone} id="form3Example4" class="form-control" />
-                    <label class="form-label" for="form3Example4">Phone Number</label>
-                    {visible3 && <div className="text-danger">Please enter your phone</div>}
-                </div>                
-                <div data-mdb-input-init class="formOutline mb-4">
-                    <textarea rows="4" ref={message} id="form3Example4" class="form-control"></textarea>
-                    <label class="form-label" for="form3Example4">How can we help you?</label>
-                    {visible4 && <div className="text-danger">Please enter your message</div>}
-                </div>     
-               
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
-                   <center> Submit </center>
-                </button>
-              
-            </form>
-            <center>
-            {showAlert && (
-      <span className="alert alert-success fade-in" role="alert">
-        Thanks for contacting us we will be back to you shortly!
-      </span>
-        )}
-        </center>
+            </div>
         </div>
+      </div>
     </div>
-</div>
-</div>
-</div>
-</div>
+  </div>
 </section>
 <section className="text-center">
   <div className="bg-image" style={{ backgroundColor: '#16918b', height: '150px', marginBottom: '-150px' }}></div>
@@ -587,7 +587,7 @@ function Home() {
             <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif' }}>
               <h1 className="mb-3 text-center text-light">About Us</h1>
               <div style={{ textAlign: 'left' }}>
-                <div className="mt-2 mx-2" style={{ fontSize: "16px" }}>
+                <div className="mt-2 mx-2" style={{ fontSize: "20px" }}>
                     At Valence Interactive LLP, we believe in more than just lines of code;
                     we believe in crafting strong connections between businesses and their audiences. Our philosophy
                     centers around a collaborative approach, where we work closely with our clients to understand
