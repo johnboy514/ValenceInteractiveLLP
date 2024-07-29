@@ -587,7 +587,7 @@ function Home() {
             <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif' }}>
               <h1 className="mb-3 text-center text-light">About Us</h1>
               <div style={{ textAlign: 'left' }}>
-                <div className="mt-2" style={{ fontSize: "20px" }}>
+                <div className="mt-2 mx-2" style={{ fontSize: "20px" }}>
                     At Valence Interactive LLP, we believe in more than just lines of code;
                     we believe in crafting strong connections between businesses and their audiences. Our philosophy
                     centers around a collaborative approach, where we work closely with our clients to understand
