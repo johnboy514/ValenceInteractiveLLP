@@ -5,7 +5,7 @@ import {React, useEffect, useRef, useState} from "react";
 // import DogWalker from "../images/LudlowDogWalker.png";
 import Hero from "../images/hero.jpg";
 import AboutUs from "../images/aboutUs.jpg";
-import OurProcess from "../images/OurProcess.svg"
+import OurProcess from "../images/OurProcess.svg";
 import reviewsBG from "../images/reviewsbg.jpg";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
