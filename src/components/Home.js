@@ -431,7 +431,7 @@ function Home() {
   </div>
 </div>  */}
 {/* --------------------------------Review Section------------------------------------ */}
- <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
+ {/* <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div> */}
 {/* <center className="reveal">
   <div style={{ maxWidth: "800px", fontFamily: '"Teachers", sans-serif', marginTop: "100px" }}>
     <h3>Hear What Our Customers Say</h3>
