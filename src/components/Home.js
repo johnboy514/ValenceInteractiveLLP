@@ -431,7 +431,7 @@ function Home() {
   </div>
 </div>  */}
 {/* --------------------------------Review Section------------------------------------ */}
- {/* <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div> */}
+ <div className="bg-image" style={{ backgroundImage: `url('${reviewsBG}')`, opacity: 0.05, position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
 {/* <center className="reveal">
   <div style={{ maxWidth: "800px", fontFamily: '"Teachers", sans-serif', marginTop: "100px" }}>
     <h3>Hear What Our Customers Say</h3>
@@ -507,7 +507,7 @@ function Home() {
     </div> 
   </div> 
 </Slider> */}
-<section>
+{/* <section>
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>
     <div class="container">
       <div class="row gx-lg-5 align-items-center">
@@ -618,18 +618,13 @@ function Home() {
                   }}
                 />
               </div>
-              {/* <a href="#contact">
-                <button type="button" className="btn btn-rounded btn-lg button-pop-out" style={{ fontFamily: '"Teachers", sans-serif', maxWidth: '200px', backgroundColor: '#16918b', color: 'white' }}>
-                  Message Us
-                </button>
-              </a> */}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> */}
 </div>
   );
 }
