@@ -185,7 +185,7 @@ function Home() {
   // };
   return (
     <div>
-{/* <section class="text-center" id="home">
+<section class="text-center" id="home">
   <div class="p-5 bg-image" style={{
         backgroundImage: `url(${Hero})`,
         height: "900px",
@@ -226,7 +226,7 @@ function Home() {
         </div>
     </div>
   </div>
-</section> */}
+</section>
 
 <section>
 <div
@@ -304,8 +304,8 @@ function Home() {
       </Slider>
     </div>
     </center>  */}
-    <section class="text-center reveal" id="pricing">
-</section>
+    {/* <section class="text-center reveal" id="pricing">
+</section> */}
 {/* <div class="row">
   <div class="col-md-3 reveal">
     <div class="card">
@@ -587,7 +587,7 @@ function Home() {
             <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif' }}>
               <h1 className="mb-3 text-center text-light">About Us</h1>
               <div style={{ textAlign: 'left' }}>
-                <div className="mt-2 mx-2" style={{ fontSize: "20px" }}>
+                <div className="mt-2" style={{ fontSize: "20px" }}>
                     At Valence Interactive LLP, we believe in more than just lines of code;
                     we believe in crafting strong connections between businesses and their audiences. Our philosophy
                     centers around a collaborative approach, where we work closely with our clients to understand
