@@ -576,7 +576,7 @@ function Home() {
       </div>
     </div>
   </div>
-</section>
+</section> */}
 <section className="text-center">
   <div className="bg-image" style={{ backgroundColor: '#16918b', height: '150px', marginBottom: '-150px' }}></div>
   <div className="row" id="aboutus">
@@ -624,7 +624,7 @@ function Home() {
       </div>
     </div>
   </div>
-</section> */}
+</section>
 </div>
   );
 }
