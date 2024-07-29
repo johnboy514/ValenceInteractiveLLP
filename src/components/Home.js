@@ -185,7 +185,7 @@ function Home() {
   // };
   return (
     <div>
-<section class="text-center" id="home">
+{/* <section class="text-center" id="home">
   <div class="p-5 bg-image" style={{
         backgroundImage: `url(${Hero})`,
         height: "900px",
@@ -226,7 +226,7 @@ function Home() {
         </div>
     </div>
   </div>
-</section>
+</section> */}
 
 <section>
 <div
