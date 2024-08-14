@@ -601,7 +601,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center" style={{ marginTop: '0' }}>
+            <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center" style={{ marginTop: '0', overflow: 'hidden' }}>
               <div style={{
                 width: 'auto',
                 height: 'auto',
