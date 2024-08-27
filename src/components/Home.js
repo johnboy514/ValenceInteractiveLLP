@@ -585,7 +585,7 @@ function Home() {
       <div className="mt-5 d-flex flex-row" style={{ backgroundColor: 'hsla(0, 100%, 100%, 0.0)', height: 'auto' }}>
         <div className="py-5 px-md-5 d-flex w-100">
           <div className="row w-100 mb-5">
-            {/* <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif', overflow: 'hidden' }}>
+            <div className="col-lg-6 d-flex flex-column" style={{ fontFamily: '"Teachers", sans-serif', overflow: 'hidden' }}>
               <h1 className="mb-3 text-center text-light">About Us</h1>
               <div style={{ textAlign: 'left' }}>
                 <div className="mt-2 mx-2" style={{ fontSize: "20px" }}>
@@ -600,7 +600,7 @@ function Home() {
                     presence is up-to-date and what you're really looking for.
                 </div>
               </div>
-            </div> */}
+            </div>
             <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center" style={{ marginTop: '0', overflow: 'hidden' }}>
               <div style={{
                 width: '100%',
