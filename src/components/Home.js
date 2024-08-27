@@ -608,7 +608,7 @@ function Home() {
                 overflow: 'hidden',
                 transform: 'skewX(-30deg)',
               }}>
-                <img
+                {/* <img
                   src={AboutUs} alt="about us"
                   style={{
                     width: '100%',
@@ -618,7 +618,7 @@ function Home() {
                     border: 'none',
                     overflow: 'hidden'
                   }}
-                />
+                /> */}
               </div>
             </div>
           </div>
