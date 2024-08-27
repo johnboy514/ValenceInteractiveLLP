@@ -603,7 +603,7 @@ function Home() {
             </div>
             <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center" style={{ marginTop: '0', overflow: 'hidden' }}>
               <div style={{
-                width: 'auto',
+                width: '100%',
                 height: 'auto',
                 overflow: 'hidden',
                 transform: 'skewX(-30deg)',
@@ -612,10 +612,11 @@ function Home() {
                   src={AboutUs} alt="about us"
                   style={{
                     width: '100%',
-                    height: '100%',
+                    height: 'auto',
                     transform: 'skewX(30deg)',
                     marginTop: '0',
-                    border: 'none'
+                    border: 'none',
+                    overflow: 'hidden'
                   }}
                 />
               </div>
