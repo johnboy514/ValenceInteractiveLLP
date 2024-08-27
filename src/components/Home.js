@@ -580,7 +580,7 @@ function Home() {
 {/* There is a bug causing the screen to be able to drift to the right in the area of 580-628 of this following section */}
 <section className="text-center">
   <div className="bg-image" style={{ backgroundColor: '#16918b', height: '150px', marginBottom: '-150px' }}></div>
-  <div className="row" id="aboutus">
+  <div className="row" id="aboutus" style={{ overflow: 'hidden' }}>
     <div className="col-md-12 reveal">
       <div className="mt-5 d-flex flex-row" style={{ backgroundColor: 'hsla(0, 100%, 100%, 0.0)', height: 'auto' }}>
         <div className="py-5 px-md-5 d-flex w-100">
@@ -611,8 +611,8 @@ function Home() {
                 <img
                   src={AboutUs} alt="about us"
                   style={{
-                    width: '100%',
-                    height: '100%',
+                    width: '90%',
+                    height: '90%',
                     transform: 'skewX(30deg)',
                     marginTop: '0',
                     border: 'none'
