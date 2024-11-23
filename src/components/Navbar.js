@@ -123,7 +123,7 @@ function NavbarComponent() {
           </div>
         </div>
       </nav>
-      <style jsx>{`
+      <style>{`
         @media (max-width: 992px) {
           .collapse.navbar-collapse {
             background-color: transparent;

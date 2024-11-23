@@ -185,24 +185,24 @@ function Home() {
   // };
   return (
     <div>
-<section class="text-center" id="home">
-  <div class="p-5 bg-image" style={{
+<section className="text-center" id="home">
+  <div className="p-5 bg-image" style={{
         backgroundImage: `url(${Hero})`,
         height: "900px",
         backgroundSize: "cover",
         filter: 'brightness(100%)'
         }}></div>
 
-  <div class="card1 mx-4 mx-md-1 slideInLeft" style={{
+  <div className="card1 mx-4 mx-md-1 slideInLeft" style={{
         marginTop: "-725px",
         background: "hsla(0, 0%, 100%, 0.0)",
         border: 'none',
         maxWidth: '900px',
         }}>
   
-      <div class="row d-flex justify-content-left">
-        <div class="col-lg-8" style={{fontFamily: '"Teachers", sans-serif'}}>
-          <h2 class=" mb-5" style={{fontSize: '50px', color: 'black'}}>Allow us to <br />
+      <div className="row d-flex justify-content-left">
+        <div className="col-lg-8" style={{fontFamily: '"Teachers", sans-serif'}}>
+          <h2 className=" mb-5" style={{fontSize: '50px', color: 'black'}}>Allow us to <br />
           <Slider {...headerSettings}>
         <div className="container">
         <div className="col-md-12">         
@@ -508,11 +508,11 @@ function Home() {
   </div> 
 </Slider> */}
 <section>
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>
-    <div class="container">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight">
+  <div className="px-4 py-5 px-md-5 text-center text-lg-start" style={{backgroundColor: 'hsla(0, 100%, 100%, 0.0)', fontFamily: '"Teachers", sans-serif'}}>
+    <div className="container">
+      <div className="row gx-lg-5 align-items-center">
+        <div className="col-lg-6 mb-5 mb-lg-0">
+          <h1 className="my-5 display-3 fw-bold ls-tight">
             Top Solutions <br />
             <span style={{color: "#16918b"}}>for your business</span>
           </h1>
@@ -522,43 +522,43 @@ function Home() {
           Collaborate with us today to create your ideal digital footprint!
           </p>
         </div>
-        <div class="col-lg-6 mb-5 mb-lg-0"  id="contact">
-            <div class="card" ref={formRef}>
-                <div class="card-body py-5 px-md-5">
+        <div className="col-lg-6 mb-5 mb-lg-0"  id="contact">
+            <div className="card" ref={formRef}>
+                <div className="card-body py-5 px-md-5">
                     <form onSubmit={handleSubmit}>
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div data-mdb-input-init class="formOutline">
-                                    <input type="text" ref={nameFirst} id="form3Example1" class="form-control" />
-                                    <label class="form-label" for="form3Example1" style={{ fontSize: '14px' }}>First name</label>
+                        <div className="row">
+                            <div className="col-md-6 mb-4">
+                                <div data-mdb-input-init className="formOutline">
+                                    <input type="text" ref={nameFirst} id="form3Example1" className="form-control" />
+                                    <label className="form-label" for="form3Example1" style={{ fontSize: '14px' }}>First name</label>
                                     {visible && <div className="text-danger">Please enter your first name</div>}
                                 </div>                        
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div data-mdb-input-init class="formOutline">
-                                    <input type="text" ref={nameLast} id="form3Example2" class="form-control" />
-                                    <label class="form-label" for="form3Example2" style={{ fontSize: '14px' }}>Last name</label>
+                            <div className="col-md-6 mb-4">
+                                <div data-mdb-input-init className="formOutline">
+                                    <input type="text" ref={nameLast} id="form3Example2" className="form-control" />
+                                    <label className="form-label" for="form3Example2" style={{ fontSize: '14px' }}>Last name</label>
                                     {visible1 && <div className="text-danger">Please enter your last name</div>}
                                 </div>
                             </div>                   
                         </div>
-                        <div data-mdb-input-init class="formOutline mb-4">
-                            <input type="email" ref={email} id="form3Example3" class="form-control" />
-                            <label class="form-label" for="form3Example3" style={{ fontSize: '14px' }}>Email address</label>
+                        <div data-mdb-input-init className="formOutline mb-4">
+                            <input type="email" ref={email} id="form3Example3" className="form-control" />
+                            <label className="form-label" for="form3Example3" style={{ fontSize: '14px' }}>Email address</label>
                             {visible2 && <div className="text-danger">Please enter your email</div>}
                         </div>                
-                        <div data-mdb-input-init class="formOutline mb-4">
-                            <input type="phone" ref={phone} id="form3Example4" class="form-control" />
-                            <label class="form-label" for="form3Example4" style={{ fontSize: '14px' }}>Phone Number</label>
+                        <div data-mdb-input-init className="formOutline mb-4">
+                            <input type="phone" ref={phone} id="form3Example4" className="form-control" />
+                            <label className="form-label" for="form3Example4" style={{ fontSize: '14px' }}>Phone Number</label>
                             {visible3 && <div className="text-danger">Please enter your phone</div>}
                         </div>                
-                        <div data-mdb-input-init class="formOutline mb-4">
-                            <textarea rows="4" ref={message} id="form3Example4" class="form-control"></textarea>
-                            <label class="form-label" for="form3Example4" style={{ fontSize: '14px' }}>How can we help you?</label>
+                        <div data-mdb-input-init className="formOutline mb-4">
+                            <textarea rows="4" ref={message} id="form3Example4" className="form-control"></textarea>
+                            <label className="form-label" for="form3Example4" style={{ fontSize: '14px' }}>How can we help you?</label>
                             {visible4 && <div className="text-danger">Please enter your message</div>}
                         </div>     
                       
-                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-block mb-4" style={{backgroundColor: "#16918b", color: "white"}}>
                           <center> Submit </center>
                         </button>
                       
