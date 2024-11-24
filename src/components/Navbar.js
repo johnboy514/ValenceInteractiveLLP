@@ -113,7 +113,6 @@ function NavbarComponent() {
             </ul>
             <div className="ms-lg-auto d-flex align-items-center justify-content-end">
               <button
-                id='notify'
                 className="btn btn-dark px-3 button-pop-out text-light"
                 style={{ backgroundColor: '#16918b', ...linkStyle }}
                 onClick={() => customScroll('contact')}
