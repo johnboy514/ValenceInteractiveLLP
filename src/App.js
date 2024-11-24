@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import './App.css';
-import { BrowserRouter as Router,  Route,  Routes,  Navigate} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Home from "./components/Home";
@@ -25,20 +26,59 @@ function App() {
       }
     }
   };
-  registerServiceWorker();
+
+  useEffect(() => {
+    if ("Notification" in window) {
+      console.log("Notifications Supported");
+
+      // Define the click handler
+      const handleNotificationClick = () => {
+        Notification.requestPermission().then((status) => {
+          console.log("Notification Permission:", status);
+          if (status === "granted") {
+            new Notification("Notification Example", {
+              body: "This is a sample notification.",
+              icon: "./images/Logo.png",
+            });
+          } else {
+            console.warn("Notification permission was not granted.");
+          }
+        });
+      };
+
+      // Attach event listener
+      const notifyButton = document.getElementById("notify");
+      if (notifyButton) {
+        notifyButton.addEventListener("click", handleNotificationClick);
+      }
+
+      // Cleanup function to remove the listener
+      return () => {
+        if (notifyButton) {
+          notifyButton.removeEventListener("click", handleNotificationClick);
+        }
+      };
+    } else {
+      console.log("Notifications not Supported");
+    }
+  }, []); // Empty dependency array ensures this runs only once
+
+  useEffect(() => {
+    registerServiceWorker();
+  }, []);
+
   return (
     <div className="App">
-    <Router>
+      <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
-    </Router>
+      </Router>
     </div>
   );
 }
 
 export default App;
-
