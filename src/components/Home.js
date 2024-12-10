@@ -13,7 +13,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import emailjs from '@emailjs/browser';
 
 function Home() {
-  {/* ------------------------Geolocation------------------------------ */}
+   //------------------------Geolocation------------------------------ 
   const [location, setLocation] = useState(null);
   const [error, setError] = useState(null);
 
