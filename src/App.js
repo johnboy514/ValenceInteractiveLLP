@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
+
   const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
       try {

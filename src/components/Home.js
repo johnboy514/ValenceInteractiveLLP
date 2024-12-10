@@ -13,6 +13,27 @@ import 'slick-carousel/slick/slick-theme.css';
 import emailjs from '@emailjs/browser';
 
 function Home() {
+  {/* ------------------------Geolocation------------------------------ */}
+  const [location, setLocation] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+        },
+        (err) => {
+          setError(err.message);
+        }
+      );
+    } else {
+      setError("Geolocation is not supported by this browser.");
+    }
+  }, []);
 
   const [showAlert, setShowAlert] = useState(false);
 
@@ -249,6 +270,17 @@ function Home() {
 
 
 </section>
+{/* ------------------------Geolocation------------------------------ */}
+<div>
+      {location ? (
+        <p>
+          Latitude: {location.latitude}, Longitude: {location.longitude}
+        </p>
+      ) : (
+        <p>Loading location...</p>
+      )}
+      {error && <p>{error}</p>}
+    </div>
 {/* <center>
     
         <div className="text-center reveal" id="projects" style={{marginTop: "400px"}}>
